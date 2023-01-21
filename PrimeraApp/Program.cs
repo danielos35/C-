@@ -16,6 +16,8 @@ namespace PrimeraApp
 }
 
 
+
+// Asi se crea un nuevo espacio
 namespace PrimeraAppSegunda
 { 
     class Data{
@@ -23,3 +25,44 @@ namespace PrimeraAppSegunda
     }
 }
 
+
+//COMENTATIOS EN C#
+
+//Comentario de una linea ===> //
+
+//Comentarios de varia lineas
+
+/*
+ COMENTARIO DE VARIAS LINEAS 
+*/
+
+/* 
+ *TIPOS DE DATOS
+ *
+ *- Por valor
+ *
+ *-- Primitivos
+ *--- Enteros
+ *--- Reales 
+ *--- Booleanos
+ *
+ *-- Estructuras
+ *-- Enumerados
+ *
+ *- Por referencia 
+ *--- Objetos
+ *
+ *
+ *
+ */
+
+
+
+
+// VARIABLES
+
+namespace Variables { 
+
+    class
+
+}
