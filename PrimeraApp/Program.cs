@@ -9,7 +9,9 @@ namespace PrimeraApp
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("Hello Word");
+            int edad = 19;
+            string name = "Daniel ";
+            Console.WriteLine(name + edad);
         }
     }
 
@@ -18,12 +20,12 @@ namespace PrimeraApp
 
 
 // Asi se crea un nuevo espacio
-namespace PrimeraAppSegunda
-{ 
-    class Data{
+//namespace PrimeraAppSegunda
+//{ 
+//    class Data{
           
-    }
-}
+//    }
+//}
 
 
 //COMENTATIOS EN C#
@@ -53,16 +55,16 @@ namespace PrimeraAppSegunda
  *--- Objetos
  *
  *
- *
+ *EN C# NO SE PUEDE USAR UNA VARIABLE SIN INICIALIZAR
  */
 
 
+/*
 
+VALORES NUMERICOS
+-  Si una operación entre dos valores numericos enteros tiene decimales, C# nos devolverá el valor entero, para ver el resultado exacto debemos operar dos decimales
 
-// VARIABLES
+ 
+ 
+ */
 
-namespace Variables { 
-
-    class
-
-}
