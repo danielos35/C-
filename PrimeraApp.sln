@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeraApp", "PrimeraApp\PrimeraApp.csproj", "{AAF014E8-ED09-4CA3-83EF-7A4BAEB04306}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAF014E8-ED09-4CA3-83EF-7A4BAEB04306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF014E8-ED09-4CA3-83EF-7A4BAEB04306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF014E8-ED09-4CA3-83EF-7A4BAEB04306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF014E8-ED09-4CA3-83EF-7A4BAEB04306}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F559D223-6ED0-4105-B396-BFB9905DD52F}
+	EndGlobalSection
+EndGlobal
