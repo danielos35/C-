@@ -10,13 +10,25 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-            //CONSTANTE (VALOR QUE NO CAMBIA) || debe inicializarse en la misma linea
-            const int DATA = 12;
-            const int DATADOS = 14;
-            Console.WriteLine("Valor de : {1}", DATA,DATADOS);
 
-            double calculo = Math.Cos(DATA);
-            Console.WriteLine(calculo);
+            //METODO
+                // En C# los metodos deben de ir declarados siempre dentro de una clase
+                // Siempre se debe tipar parametros y el return
+                // METODO y FUNCIÓN en C# es exactamente lo mismo
+             
+            int suma(int n1, int n2) {
+                return n1 + n2;
+            }
+
+            void metodoQueNoDevuelveNada()
+            {
+                Console.WriteLine("DATA");
+            }
+            int number1 = int.Parse(Console.ReadLine());
+            int number2 = int.Parse(Console.ReadLine());
+            Console.WriteLine(suma(number1, number2));
+
+
 
         }
     }
@@ -127,5 +139,17 @@ VALORES NUMERICOS
 
 
  
+ 
+ */
+
+/*
+ 
+                //CONSTANTE (VALOR QUE NO CAMBIA) || debe inicializarse en la misma linea
+            const int DATA = 12;
+            const int DATADOS = 14;
+            Console.WriteLine("Valor de : {1}", DATA,DATADOS);
+
+            double calculo = Math.Cos(DATA);
+            Console.WriteLine(calculo);
  
  */
