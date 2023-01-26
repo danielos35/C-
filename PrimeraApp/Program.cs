@@ -32,8 +32,18 @@ namespace PrimeraApp
 
             // Conversion explicita || Casting 
             double temperatura = 34.9;
-            int temperaturaMedellin; 
-            temperaturaMedellin = (int)temperatura
+            int temperaturaMedellin;
+            temperaturaMedellin = (int)temperatura;
+
+            Console.WriteLine(temperatura);
+            Console.WriteLine(temperaturaMedellin);
+
+            // Conversión implicita (se convierte sin la necesidad de castear)
+            int habitantes = 199;
+            long habitantesMedellin = habitantes;
+
+            Console.WriteLine(habitantesMedellin);
+            Console.WriteLine(habitantes);
         }
     }
 
