@@ -28,6 +28,12 @@ namespace PrimeraApp
 
             Console.WriteLine(name);
             Console.WriteLine(age);
+
+
+            // Conversion explicita || Casting 
+            double temperatura = 34.9;
+            int temperaturaMedellin; 
+            temperaturaMedellin = (int)temperatura
         }
     }
 
