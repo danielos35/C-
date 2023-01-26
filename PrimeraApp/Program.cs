@@ -7,6 +7,8 @@ namespace PrimeraApp
 {
     class Program
     {
+
+        // CUALQUIER APLICATIVO EN C# EMPIEZA SU EJECUCIÓN POR EL METODO MAIN
         static void Main(string[] args)
         {
 
@@ -24,6 +26,8 @@ namespace PrimeraApp
             {
                 Console.WriteLine("DATA");
             }
+
+            metodoQueNoDevuelveNada();
             int number1 = int.Parse(Console.ReadLine());
             int number2 = int.Parse(Console.ReadLine());
             Console.WriteLine(suma(number1, number2));
