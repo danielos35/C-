@@ -10,40 +10,14 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-            //INICIALIZAR VARIABLES MULTIPLES
+            //CONSTANTE (VALOR QUE NO CAMBIA) || debe inicializarse en la misma linea
+            const int DATA = 12;
+            const int DATADOS = 14;
+            Console.WriteLine("Valor de : {1}", DATA,DATADOS);
 
-            int edadPersona1;
-            int edadPersona2;
-            int edadPersona3;
+            double calculo = Math.Cos(DATA);
+            Console.WriteLine(calculo);
 
-            edadPersona1 = edadPersona2 = edadPersona3 = 12;
-            Console.WriteLine(edadPersona1);
-            Console.WriteLine(edadPersona2);
-            Console.WriteLine(edadPersona3);
-
-            // DECLARACION IMPLICITA DE VARIABLES
-            // Las variables infieren el tipo de dato
-            var name = "Daniel";
-            var age = 12;
-
-            Console.WriteLine(name);
-            Console.WriteLine(age);
-
-
-            // Conversion explicita || Casting 
-            double temperatura = 34.9;
-            int temperaturaMedellin;
-            temperaturaMedellin = (int)temperatura;
-
-            Console.WriteLine(temperatura);
-            Console.WriteLine(temperaturaMedellin);
-
-            // Conversión implicita (se convierte sin la necesidad de castear)
-            int habitantes = 199;
-            long habitantesMedellin = habitantes;
-
-            Console.WriteLine(habitantesMedellin);
-            Console.WriteLine(habitantes);
         }
     }
 
@@ -55,7 +29,7 @@ namespace PrimeraApp
 //namespace PrimeraAppSegunda
 //{ 
 //    class Data{
-          
+
 //    }
 //}
 
@@ -100,3 +74,58 @@ VALORES NUMERICOS
  
  */
 
+/*
+ 
+            //INICIALIZAR VARIABLES MULTIPLES
+
+            int edadPersona1;
+            int edadPersona2;
+            int edadPersona3;
+
+            edadPersona1 = edadPersona2 = edadPersona3 = 12;
+            Console.WriteLine(edadPersona1);
+            Console.WriteLine(edadPersona2);
+            Console.WriteLine(edadPersona3);
+
+            // DECLARACION IMPLICITA DE VARIABLES
+            // Las variables infieren el tipo de dato
+            var name = "Daniel";
+            var age = 12;
+
+            Console.WriteLine(name);
+            Console.WriteLine(age);
+
+
+            // Conversion explicita || Casting 
+            double temperatura = 34.9;
+            int temperaturaMedellin;
+            temperaturaMedellin = (int)temperatura;
+
+            Console.WriteLine(temperatura);
+            Console.WriteLine(temperaturaMedellin);
+
+            // Conversión implicita (se convierte sin la necesidad de castear)
+            int habitantes = 199;
+            long habitantesMedellin = habitantes;
+
+            Console.WriteLine(habitantesMedellin);
+            Console.WriteLine(habitantes);
+ 
+ 
+ 
+ */
+
+
+/*
+ 
+    
+            //CONVERSIÓN DE DATA
+
+            Console.WriteLine("Introduce el primer valor numerico");
+            int data = int.Parse(Console.ReadLine());
+            Console.WriteLine("ESCRIBISTE " + data);
+
+
+ 
+ 
+ */
