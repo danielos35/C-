@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 
 
@@ -8,32 +9,27 @@ namespace PrimeraApp
     class Program
     {
 
-        // CUALQUIER APLICATIVO EN C# EMPIEZA SU EJECUCIÓN POR EL METODO MAIN
+        // CUALQUIER APLICATIVO EN C# EMPIEZA SU EJECUCIÓN POR EL METODO MAIN (ES EL PUNTO DE ENTRADA DE LA APLICACIÓN
         static void Main(string[] args)
         {
 
 
-            //METODO
-                // En C# los metodos deben de ir declarados siempre dentro de una clase
-                // Siempre se debe tipar parametros y el return
-                // METODO y FUNCIÓN en C# es exactamente lo mismo
-             
-            int suma(int n1, int n2) {
-                return n1 + n2;
-            }
+            // LLAMAR A UN METODO ESTATICO
+                // Podemos llamar un metodo las veces que sean necesarias
+            MensajeEnPanta();
 
-            void metodoQueNoDevuelveNada()
-            {
-                Console.WriteLine("DATA");
-            }
-
-            metodoQueNoDevuelveNada();
-            int number1 = int.Parse(Console.ReadLine());
-            int number2 = int.Parse(Console.ReadLine());
-            Console.WriteLine(suma(number1, number2));
+            SumarNumeros(12, 2);
 
 
+        }
 
+        static void MensajeEnPanta()
+        {
+            Console.WriteLine("test");
+        }
+
+        static void SumarNumeros(int num1, int num2) {
+            Console.WriteLine($"DATA:{num1+num2}");
         }
     }
 
@@ -155,5 +151,33 @@ VALORES NUMERICOS
 
             double calculo = Math.Cos(DATA);
             Console.WriteLine(calculo);
+ 
+ */
+
+/*
+ 
+ 
+ 
+            //METODO #1
+                // En C# los metodos deben de ir declarados siempre dentro de una clase
+                // Siempre se debe tipar parametros y el return
+                // METODO y FUNCIÓN en C# es exactamente lo mismo
+             
+            int suma(int n1, int n2) {
+                return n1 + n2;
+            }
+
+            void metodoQueNoDevuelveNada()
+            {
+                Console.WriteLine("DATA");
+            }
+
+            metodoQueNoDevuelveNada();
+            int number1 = int.Parse(Console.ReadLine());
+            int number2 = int.Parse(Console.ReadLine());
+            Console.WriteLine(suma(number1, number2));
+ 
+ 
+ 
  
  */
