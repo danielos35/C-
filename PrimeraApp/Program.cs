@@ -9,9 +9,25 @@ namespace PrimeraApp
     {
         static void Main(string[] args)
         {
-            int edad = 19;
-            string name = "Daniel ";
-            Console.WriteLine(name + edad);
+
+            //INICIALIZAR VARIABLES MULTIPLES
+
+            int edadPersona1;
+            int edadPersona2;
+            int edadPersona3;
+
+            edadPersona1 = edadPersona2 = edadPersona3 = 12;
+            Console.WriteLine(edadPersona1);
+            Console.WriteLine(edadPersona2);
+            Console.WriteLine(edadPersona3);
+
+            // DECLARACION IMPLICITA DE VARIABLES
+            // Las variables infieren el tipo de dato
+            var name = "Daniel";
+            var age = 12;
+
+            Console.WriteLine(name);
+            Console.WriteLine(age);
         }
     }
 
