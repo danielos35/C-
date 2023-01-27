@@ -9,15 +9,45 @@ namespace PrimeraApp
     class Program
     {
 
+        static void Mensaje(int number = 0)
+        {
+            Console.WriteLine($"El numero elegido es {number}");
+        }
+
       
         static void Main(string[] args)
         {
 
-            Suma(1, 2);
+
+            // CON SWITCH SOLO PODEMOS EVALUAR INT CHAR STRING
+                //PARA FLOAT y DOBLE UTILIZAMOS IF
+                //SE PUEDE USAR TRUE O RETURN EN LUGAR DE BREAK
+
+                
+
+
+            int NUMBER = int.Parse(Console.ReadLine());
+            switch (NUMBER) {
+
+                case 2:
+                    Mensaje(NUMBER);
+                    break;
+
+                case 3:
+                    Mensaje(NUMBER);
+                    break;
+
+
+                default:
+                    Console.WriteLine("EJECUCIÓN POR DEFECTO");
+                    break;
+            
+            }
+            
 
         }
 
-        private static int Suma(int v1, int v2, int v3 = 0)=> v1 + v2 + v3;
+
     }
 
 }
@@ -245,6 +275,41 @@ VALORES NUMERICOS
         static int Suma(int num1, int num2, int num3) => num1 + num2 + num3;
 
         static int Suma(int num1, int num2, int num3, int num4) => num1 + num2 + num3 + num4;
+ 
+ 
+ */
+
+
+
+/*
+ 
+ 
+         // Siempre se llama al metodo que se adapte mejor al numero de parametros 
+        private static int Suma(int v1, int v2, int v3 = 0)=> v1 + v2 + v3;
+ 
+ 
+ */
+
+
+/*
+ 
+ 
+    OPERADORES DE COMPORACIÓN
+
+        - ==
+        - !=
+        - <
+        - <=
+        - >
+        - >=
+
+
+
+    OPERADORES DE COMPARACIÓN
+
+        - &&
+        - ||
+ 
  
  
  */
