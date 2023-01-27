@@ -9,7 +9,7 @@ namespace PrimeraApp
     class Program
     {
 
-        //VARIABLES COMPARTIDAS
+        //VARIABLES COMPARTIDAS || ES DENOMINADA AMBITO DE CLASE
         int numero1 = 3; 
         int numero2 = ;
 
@@ -17,28 +17,26 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-
+            Suma(1, 2);
+            Suma(1, 2, 3);
+            Suma(1, 2, 3, 6);
 
 
         }
             
-        
-        // CONTEXTO AMBITO Y ALCANCE SON LO MISMO (SCOPE)
+
+
+        //SOBRE CARGA Y RETURNO EXPLICITO
+            // Para hacer sobrecarga el metodo debe de recibir diferente tipo paraetros o diferente numero de parameros
+        static int Suma(int num1, int num2) => num1 + num2;
+
+        static int Suma(int num1, int num2, int num3) => num1 + num2 + num3;
+
+        static int Suma(int num1, int num2, int num3, int num4) => num1 + num2 + num3 + num4;
 
 
 
-        void PrimerMetodo()
-        {   
 
-            //ALCANCE LOCAL
-            string daniel = "Daniel";
-            Console.WriteLine(numero1 + numero2);
-        }
-
-        void SegundoMetodo()
-        {
-            Console.WriteLine(numero1+numero2);
-        }
 
 
     }
@@ -213,5 +211,32 @@ VALORES NUMERICOS
             }
  
  
+ 
+ */
+
+
+/*
+ 
+         
+        // CONTEXTO AMBITO Y ALCANCE SON LO MISMO (SCOPE)
+
+
+
+        void PrimerMetodo()
+        {   
+
+            //ALCANCE LOCAL
+            Console.WriteLine(numero1 + numero2);
+        }
+
+        void SegundoMetodo()
+        {
+            Console.WriteLine(numero1+numero2);
+        }
+
+
+        //SOBRECARGA DE METODOS
+        // DOS O MAS METODOS CON EL MISMO NOMBRE
+
  
  */
