@@ -9,28 +9,38 @@ namespace PrimeraApp
     class Program
     {
 
+        //VARIABLES COMPARTIDAS
+        int numero1 = 3; 
+        int numero2 = ;
+
         // CUALQUIER APLICATIVO EN C# EMPIEZA SU EJECUCIÓN POR EL METODO MAIN (ES EL PUNTO DE ENTRADA DE LA APLICACIÓN
         static void Main(string[] args)
         {
 
 
-            // LLAMAR A UN METODO ESTATICO
-                // Podemos llamar un metodo las veces que sean necesarias
-            MensajeEnPanta();
-
-            SumarNumeros(12, 2);
 
 
         }
+            
+        
+        // CONTEXTO AMBITO Y ALCANCE SON LO MISMO (SCOPE)
 
-        static void MensajeEnPanta()
+
+
+        void PrimerMetodo()
+        {   
+
+            //ALCANCE LOCAL
+            string daniel = "Daniel";
+            Console.WriteLine(numero1 + numero2);
+        }
+
+        void SegundoMetodo()
         {
-            Console.WriteLine("test");
+            Console.WriteLine(numero1+numero2);
         }
 
-        static void SumarNumeros(int num1, int num2) {
-            Console.WriteLine($"DATA:{num1+num2}");
-        }
+
     }
 
 }
@@ -177,6 +187,30 @@ VALORES NUMERICOS
             int number2 = int.Parse(Console.ReadLine());
             Console.WriteLine(suma(number1, number2));
  
+ 
+ 
+ 
+ */
+
+
+/*
+ 
+ 
+    
+            // LLAMAR A UN METODO ESTATICO
+                // Podemos llamar un metodo las veces que sean necesarias
+            MensajeEnPanta();
+
+            SumarNumeros(12, 2);
+
+            static void MensajeEnPanta()
+            {
+                Console.WriteLine("test");
+            }
+
+            static void SumarNumeros(int num1, int num2) {
+                Console.WriteLine($"DATA:{num1+num2}");
+            }
  
  
  
