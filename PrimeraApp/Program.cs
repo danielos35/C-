@@ -14,12 +14,10 @@ namespace PrimeraApp
         {
 
             Suma(1, 2);
-            Suma(1, 2, 3);
-            Suma(1, 2, 3, 6);
 
         }
-            
 
+        private static int Suma(int v1, int v2, int v3 = 0)=> v1 + v2 + v3;
     }
 
 }
@@ -240,6 +238,8 @@ VALORES NUMERICOS
  
         //SOBRE CARGA Y RETURNO EXPLICITO
             // Para hacer sobrecarga el metodo debe de recibir diferente tipo paraetros o diferente numero de parameros
+            // EL retorno explicito es llamado lambda en C#
+
         static int Suma(int num1, int num2) => num1 + num2;
 
         static int Suma(int num1, int num2, int num3) => num1 + num2 + num3;
