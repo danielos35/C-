@@ -9,41 +9,42 @@ namespace PrimeraApp
     class Program
     {
 
-        static void Mensaje(int number = 0)
-        {
-            Console.WriteLine($"El numero elegido es {number}");
-        }
 
       
         static void Main(string[] args)
         {
 
+            /*
+             
+                TIPO DE BUCLES
 
-            // CON SWITCH SOLO PODEMOS EVALUAR INT CHAR STRING
-                //PARA FLOAT y DOBLE UTILIZAMOS IF
-                //SE PUEDE USAR TRUE O RETURN EN LUGAR DE BREAK
+                - Determinados: Sabemos las veces que se va a repetir (FOR | FOR EACH)
+                - Indeterminados: NO sabemos el numero de veces que se va repetir (WHILE DO WHILE)
 
-                
+             */
 
+            //VAriable Random
 
-            int NUMBER = int.Parse(Console.ReadLine());
-            switch (NUMBER) {
+            Random random = new Random();
+            int numero = random.Next(0, 100);
+            int numeroIngresado = 0;
 
-                case 2:
-                    Mensaje(NUMBER);
-                    break;
+            int i = 0;
+            while(numeroIngresado != numero)
+            {
+                numeroIngresado = int.Parse(Console.ReadLine());
+                if( numeroIngresado > numero) {
+                    Console.WriteLine("Es MENOR");
+                }
 
-                case 3:
-                    Mensaje(NUMBER);
-                    break;
-
-
-                default:
-                    Console.WriteLine("EJECUCIÓN POR DEFECTO");
-                    break;
-            
+                if (numeroIngresado < numero)
+                {
+                    Console.WriteLine("Es MAYOR");
+                }
+                i++;
             }
-            
+
+            Console.WriteLine("LO CONSEGUISTE");
 
         }
 
@@ -311,5 +312,44 @@ VALORES NUMERICOS
         - ||
  
  
+ 
+ */
+
+
+/*
+ 
+    SWITCH
+        
+
+            // CON SWITCH SOLO PODEMOS EVALUAR INT CHAR STRING
+                //PARA FLOAT y DOBLE UTILIZAMOS IF
+                //SE PUEDE USAR TRUE O RETURN EN LUGAR DE BREAK
+
+                
+
+
+            int NUMBER = int.Parse(Console.ReadLine());
+            switch (NUMBER) {
+
+                case 2:
+                    Mensaje(NUMBER);
+                    break;
+
+                case 3:
+                    Mensaje(NUMBER);
+                    break;
+
+
+                default:
+                    Console.WriteLine("EJECUCIÓN POR DEFECTO");
+                    break;
+            
+            }
+
+            static void Mensaje(int number = 0)
+        {
+            Console.WriteLine($"El numero elegido es {number}");
+        }
+
  
  */
