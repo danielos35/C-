@@ -26,17 +26,27 @@ namespace PrimeraApp
              
              */
 
+            /*
+             
+                EXCEPCIÓN (Herencia de excepción)
+                - La herencia de herencias nos permite capturar errores generico
+                - la clase padre es Excepción
+             
+             
+             */
 
+
+            int number = 0;
             while (true)
             {
                 try
                 {
                     int input = int.Parse(Console.ReadLine());
                     Console.WriteLine($"Este es el numero{input}");
+                    number++;
                 }
-                catch (Exception err)
-                {
-                    Console.WriteLine(err.ToString());
+                catch (Exception err){
+                    Console.WriteLine("ESTO NO ES UN NUMERO PA");
                 }
             }
   
