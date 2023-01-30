@@ -15,41 +15,14 @@ namespace PrimeraApp
         {
 
 
+            //DEVOLVER EXCEPCIÓN
+            int number =int.Parse(Console.ReadLine());
+            if(number == 0) {
 
-            //EL COMPILADOR ASUME QUE HAY UN ERROR PERO NO LO CAPTURA POR TEMAS DE RENDIMIENTO
-                //Para capturar ese error usamos checked
-                // SOLO FUNCIONA PARA PRIMITIVOS INT Y LONG
+                throw new ArgumentOutOfRangeException();
 
-                /*
-                    El compilador puede se exhaustivo para validar todos los errores
-                    -  Se va a la configuración del proyecto>propiedades>build || compilación>advance > habilitar compilación aritmetica avanzada>
-                    - Este comportamiento se da solo para desbordamiento         
-
-                */
             
-            //FORMA #1
-            checked
-            {
-
-                int numero = int.MaxValue;
-                numero = numero + 20;
-                Console.WriteLine(numero);
             }
-
-            //FORMA 2
-            int numeroMayor = int.MaxValue;
-            numeroMayor = checked(numeroMayor + 20);
-
-
-            //Deshabilitar en caso de estar habilitado el checkeo por defecto
-            int numeroMayor2 = int.MaxValue;
-            numeroMayor2 = unchecked(numeroMayor2 + 20);
-
-
-            // CONFIGURACIÓN DE EXCEPCIONES
-                //debun>windows>settings>excepcion settings
-
-
 
         }
 
@@ -474,5 +447,48 @@ while (true)
 }
 
 
+
+*/
+
+
+/*
+ 
+    EXCEPCIONES
+
+    
+            //EL COMPILADOR ASUME QUE HAY UN ERROR PERO NO LO CAPTURA POR TEMAS DE RENDIMIENTO
+                //Para capturar ese error usamos checked
+                // SOLO FUNCIONA PARA PRIMITIVOS INT Y LONG
+
+                /*
+                    El compilador puede se exhaustivo para validar todos los errores
+                    -  Se va a la configuración del proyecto>propiedades>build || compilación>advance > habilitar compilación aritmetica avanzada>
+                    - Este comportamiento se da solo para desbordamiento         
+
+                */
+
+//FORMA #1
+
+/*
+checked
+{
+
+    int numero = int.MaxValue;
+    numero = numero + 20;
+    Console.WriteLine(numero);
+}
+
+//FORMA 2
+int numeroMayor = int.MaxValue;
+numeroMayor = checked(numeroMayor + 20);
+
+
+//Deshabilitar en caso de estar habilitado el checkeo por defecto
+int numeroMayor2 = int.MaxValue;
+numeroMayor2 = unchecked(numeroMayor2 + 20);
+
+
+// CONFIGURACIÓN DE EXCEPCIONES
+//debun>windows>settings>excepcion settings
 
 */
