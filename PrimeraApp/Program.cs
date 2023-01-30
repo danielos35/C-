@@ -14,15 +14,19 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
+            try
+            {
 
-            //DEVOLVER EXCEPCIÓN
-            int number =int.Parse(Console.ReadLine());
-            if(number == 0) {
-
-                throw new ArgumentOutOfRangeException();
-
-            
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
+            finally
+            {
+                // BLOQUE QUE SIEMPRE SE VA A EJECUTAR
+                Console.WriteLine("SIEMPRE ME EJECUTO");
+            }
+
 
         }
 
@@ -492,3 +496,18 @@ numeroMayor2 = unchecked(numeroMayor2 + 20);
 //debun>windows>settings>excepcion settings
 
 */
+
+
+/*
+ 
+-  EXCEPCIÓN DEL CODIGO CUSTOM
+            //DEVOLVER EXCEPCIÓN
+            int number =int.Parse(Console.ReadLine());
+            if(number == 0) {
+
+                throw new ArgumentOutOfRangeException();
+
+            
+            }
+ 
+ */
