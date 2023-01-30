@@ -14,59 +14,24 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-            /*
-             
-                EXCEPCIONES (Causas)
-                - Memoria corrupta
-                - Desbordamiento de pila
-                - Sectores de disco duro defectuosos
-                - Acceso a ficheros inexistentes
-                - Conexiones a BBDD interrumpidas
-                - ETC
-                - Intentar capturar las excepciones puntuales (NO GENERALIZAR)
-             
-             */
-
-            /*
-             
-                EXCEPCIÓN (Herencia de excepción)
-                - La herencia de herencias nos permite capturar errores generico
-                - la clase padre es Excepción
-             
-             
-             */
 
 
-            int number = 0;
-            while (true)
+            //EL COMPILADOR ASUME QUE HAY UN ERROR PERO NO LO CAPTURA POR TEMAS DE RENDIMIENTO
+                //Para capturar ese error usamos checked
+
+                /*
+                    El compilador puede se exhaustivo para validar todos los errores
+                    -  Se va a la configuración del proyecto>propiedades>build || compilación>advance > habilitar compilación aritmetica avanzada>
+
+                */
+            checked
             {
-                try
-                {
-                    int input = int.Parse(Console.ReadLine());
-                    Console.WriteLine($"Este es el numero{input}");
-                    number++;
-                }
 
-                // LAS CAPTURAS CONCRETAS DEBEN DE IR ANTES DE LA CAPTURA GENERA
-                catch (FormatException)
-                {
-                    Console.WriteLine("SE HA INTRODUCIDO UN FORMATO INADECUADO");
-                }
+                int numero = int.MaxValue;
+                numero = numero + 20;
+                Console.WriteLine(numero);
 
-
-                // EXCEPCIONES CON FILTROS
-     
-                catch (Exception err) when ( err.GetType() != typeof(OverflowException) ) {
-                    Console.WriteLine("ESTO NO ES UN NUMERO PA");
-                    Console.WriteLine(err.Message);
-                }
-
-                catch (OverflowException)
-                {
-                    Console.WriteLine("TE PASASTE CON EL NUMERO");
-                }
             }
-  
 
      
         }
@@ -432,3 +397,65 @@ VALORES NUMERICOS
  
  
  */
+
+
+/*
+ 
+      /*
+             
+                EXCEPCIONES (Causas)
+                - Memoria corrupta
+                - Desbordamiento de pila
+                - Sectores de disco duro defectuosos
+                - Acceso a ficheros inexistentes
+                - Conexiones a BBDD interrumpidas
+                - ETC
+                - Intentar capturar las excepciones puntuales (NO GENERALIZAR)
+             
+             */
+
+/*
+
+    EXCEPCIÓN (Herencia de excepción)
+    - La herencia de herencias nos permite capturar errores generico
+    - la clase padre es Excepción
+
+
+ */
+
+/*
+
+int number = 0;
+while (true)
+{
+    try
+    {
+        int input = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Este es el numero{input}");
+        number++;
+    }
+
+    // LAS CAPTURAS CONCRETAS DEBEN DE IR ANTES DE LA CAPTURA GENERA
+    catch (FormatException)
+    {
+        Console.WriteLine("SE HA INTRODUCIDO UN FORMATO INADECUADO");
+    }
+
+
+    // EXCEPCIONES CON FILTROS
+
+    catch (Exception err) when (err.GetType() != typeof(OverflowException))
+    {
+        Console.WriteLine("ESTO NO ES UN NUMERO PA");
+        Console.WriteLine(err.Message);
+    }
+
+    catch (OverflowException)
+    {
+        Console.WriteLine("TE PASASTE CON EL NUMERO");
+    }
+}
+
+
+
+*/
