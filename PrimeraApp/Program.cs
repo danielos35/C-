@@ -23,6 +23,7 @@ namespace PrimeraApp
                 - Acceso a ficheros inexistentes
                 - Conexiones a BBDD interrumpidas
                 - ETC
+                - Intentar capturar las excepciones puntuales (NO GENERALIZAR)
              
              */
 
@@ -45,8 +46,24 @@ namespace PrimeraApp
                     Console.WriteLine($"Este es el numero{input}");
                     number++;
                 }
-                catch (Exception err){
+
+                // LAS CAPTURAS CONCRETAS DEBEN DE IR ANTES DE LA CAPTURA GENERA
+                catch (FormatException)
+                {
+                    Console.WriteLine("SE HA INTRODUCIDO UN FORMATO INADECUADO");
+                }
+
+
+                // EXCEPCIONES CON FILTROS
+     
+                catch (Exception err) when ( err.GetType() != typeof(OverflowException) ) {
                     Console.WriteLine("ESTO NO ES UN NUMERO PA");
+                    Console.WriteLine(err.Message);
+                }
+
+                catch (OverflowException)
+                {
+                    Console.WriteLine("TE PASASTE CON EL NUMERO");
                 }
             }
   
