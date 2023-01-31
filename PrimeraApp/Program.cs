@@ -15,7 +15,7 @@ namespace PrimeraApp
         {
 
             /*
-             PARADIGMAS
+             PARADIGMAS:
              - Programación orientada a procedimientos
                 -- Fortran
                 -- Cobol
@@ -23,7 +23,7 @@ namespace PrimeraApp
                 -- Poco reutilizable
                 -- un solo fallo termina la ejecución del programa
              
-             - Programación orientada a objetos
+             - Programación orientada a objetos:
                 -- Trasladar la programación a los objetos de la vida real
                 -- los objetos tienes caracteristicas
                 -- Partes, trozos, modulos o clases
@@ -37,6 +37,15 @@ namespace PrimeraApp
                     - internal (Accesible desde el mismo ensamblado)
                     - Protected internal 
                     - etc
+
+            - Vocabulario:
+                - Clase
+                - Objeto
+                - Ejemplar de la clase
+                - Modularización
+                - Encapsulamiento
+                - Herencia
+                - Poliformismo
 
 
              */
