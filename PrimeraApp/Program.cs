@@ -14,18 +14,32 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-            try
-            {
+            /*
+             PARADIGMAS
+             - Programación orientada a procedimientos
+                -- Fortran
+                -- Cobol
+                -- Basic
+                -- Poco reutilizable
+                -- un solo fallo termina la ejecución del programa
+             
+             - Programación orientada a objetos
+                -- Trasladar la programación a los objetos de la vida real
+                -- los objetos tienes caracteristicas
+                -- Partes, trozos, modulos o clases
+                -- herencia
+                -- El programa no cae por completo
+                -- Encapsulamiento
+                -- Modificadores de acceso (Hay mas que en otros lenguages)
+                    - pulbic (se puede acceder desde cualquier parte)
+                    - Private (Solo se puede acceder desde la propia clase)
+                    - protected (Accesible desde la clase derivada)
+                    - internal (Accesible desde el mismo ensamblado)
+                    - Protected internal 
+                    - etc
 
-            }catch(Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                // BLOQUE QUE SIEMPRE SE VA A EJECUTAR
-                Console.WriteLine("SIEMPRE ME EJECUTO");
-            }
+
+             */
 
 
         }
@@ -509,5 +523,27 @@ numeroMayor2 = unchecked(numeroMayor2 + 20);
 
             
             }
+ 
+ */
+
+
+/*
+    
+//FINALLy
+ 
+            try
+            {
+
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                // BLOQUE QUE SIEMPRE SE VA A EJECUTAR
+                Console.WriteLine("SIEMPRE ME EJECUTO");
+            }
+
+ 
  
  */
