@@ -47,6 +47,14 @@ namespace PrimeraApp
                 - Herencia
                 - Poliformismo
 
+            - Clase
+                - Plantilla donde se definen las caracteristicas
+            
+            - Objeto
+                - Instancia de la clase, se tiene definino ya las caracteristicas indicadas en la clase
+
+            NOTAS
+            -   Pseudocodigo: mitad codigo de programación y codigo humano
 
              */
 
