@@ -14,54 +14,35 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-            /*
-             PARADIGMAS:
-             - Programación orientada a procedimientos
-                -- Fortran
-                -- Cobol
-                -- Basic
-                -- Poco reutilizable
-                -- un solo fallo termina la ejecución del programa
-             
-             - Programación orientada a objetos:
-                -- Trasladar la programación a los objetos de la vida real
-                -- los objetos tienes caracteristicas
-                -- Partes, trozos, modulos o clases
-                -- herencia
-                -- El programa no cae por completo
-                -- Encapsulamiento
-                -- Modificadores de acceso (Hay mas que en otros lenguages)
-                    - pulbic (se puede acceder desde cualquier parte)
-                    - Private (Solo se puede acceder desde la propia clase)
-                    - protected (Accesible desde la clase derivada)
-                    - internal (Accesible desde el mismo ensamblado)
-                    - Protected internal 
-                    - etc
+            // Crear clase e iniciar la clase (Instasiación) || Creación de ejemplar de clase
+            Circulo miMiCirculo = new Circulo();
+            Console.WriteLine(miMiCirculo.calculoArea(2));
 
-            - Vocabulario:
-                - Clase
-                - Objeto
-                - Ejemplar de la clase
-                - Modularización
-                - Encapsulamiento
-                - Herencia
-                - Poliformismo
 
-            - Clase
-                - Plantilla donde se definen las caracteristicas
-            
-            - Objeto
-                - Instancia de la clase, se tiene definino ya las caracteristicas indicadas en la clase
-
-            NOTAS
-            -   Pseudocodigo: mitad codigo de programación y codigo humano
-
-             */
 
 
         }
 
     }
+
+
+    //CLASE
+    class Circulo
+    {
+        //Propiedad de tipo privada
+        public const double pi = 3.1416;
+
+        //Propiedad de tipo publica
+        public double calculoArea(int radio)
+        { 
+            return pi * radio * radio; 
+        }
+
+    
+    
+    
+    }
+
 
 }
 
@@ -564,3 +545,54 @@ numeroMayor2 = unchecked(numeroMayor2 + 20);
  
  
  */
+
+/*
+ 
+    
+            /*
+             PARADIGMAS:
+             - Programación orientada a procedimientos
+                -- Fortran
+                -- Cobol
+                -- Basic
+                -- Poco reutilizable
+                -- un solo fallo termina la ejecución del programa
+             
+             - Programación orientada a objetos:
+                -- Trasladar la programación a los objetos de la vida real
+                -- los objetos tienes caracteristicas
+                -- Partes, trozos, modulos o clases
+                -- herencia
+                -- El programa no cae por completo
+                -- Encapsulamiento
+                -- Modificadores de acceso (Hay mas que en otros lenguages)
+                    - pulbic (se puede acceder desde cualquier parte)
+                    - Private (Solo se puede acceder desde la propia clase)
+                    - protected (Accesible desde la clase derivada)
+                    - internal (Accesible desde el mismo ensamblado)
+                    - Protected internal 
+                    - etc
+
+            - Vocabulario:
+                - Clase
+                - Objeto
+                - Ejemplar de la clase
+                - Modularización
+                - Encapsulamiento
+                - Herencia
+                - Poliformismo
+
+            - Clase
+                - Plantilla donde se definen las caracteristicas
+            
+            - Objeto
+                - Instancia de la clase, se tiene definino ya las caracteristicas indicadas en la clase
+
+            NOTAS
+            -   Pseudocodigo: mitad codigo de programación y codigo humano
+
+             */
+
+
+
+*/
