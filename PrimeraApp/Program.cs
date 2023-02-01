@@ -30,7 +30,7 @@ namespace PrimeraApp
     class Circulo
     {
         //Propiedad de tipo privada
-        public const double pi = 3.1416;
+        private const double pi = 3.1416;
 
         //Propiedad de tipo publica
         public double calculoArea(int radio)
@@ -38,7 +38,19 @@ namespace PrimeraApp
             return pi * radio * radio; 
         }
 
-    
+        
+        /*
+         
+         NOTAS
+            - Siempre usar encapsuladores (Modificadores de acceso)
+            - ¿Cuando encapsular? En las constantes
+        
+
+        //CONVENCIONES
+            - Los metodos Public se recomienda que comiencen en mayuscula (PascalCase)
+            - los identificadores NO public deben iniciar con camelCase
+            - Los datos se deben de cambiar desde modificadores de acceso Getter || Setters
+         */
     
     
     }
