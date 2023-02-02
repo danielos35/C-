@@ -14,9 +14,7 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-            // Crear clase e iniciar la clase (Instasiación) || Creación de ejemplar de clase
-            Circulo miMiCirculo = new Circulo();
-            Console.WriteLine(miMiCirculo.calculoArea(2));
+
 
 
 
@@ -27,33 +25,34 @@ namespace PrimeraApp
 
 
     //CLASE
-    class Circulo
+    class Coche
     {
-        //Propiedad de tipo privada
-        private const double pi = 3.1416;
+        private int ruedas;
+        private int largo;
+        private int ancho;
+        private bool esDeportivo;
+        private string tapiceria;
 
-        //Propiedad de tipo publica
-        public double calculoArea(int radio)
-        { 
-            return pi * radio * radio; 
+        /*
+            - El constructor debe tener el mismo nombre de la clase
+            - Dar estado incial al coche
+         */
+
+        public Coche()
+        {
+            ruedas = 0;
+            largo= 0;
+            ancho = 0;
+            esDeportivo = false;
         }
 
-        
-        /*
-         
-         NOTAS
-            - Siempre usar encapsuladores (Modificadores de acceso)
-            - ¿Cuando encapsular? En las constantes
-        
-
-        //CONVENCIONES
-            - Los metodos Public se recomienda que comiencen en mayuscula (PascalCase)
-            - los identificadores NO public deben iniciar con camelCase
-            - Los datos se deben de cambiar desde modificadores de acceso Getter || Setters
-         */
     
     
     }
+
+
+
+
 
 
 }
@@ -605,6 +604,35 @@ numeroMayor2 = unchecked(numeroMayor2 + 20);
 
              */
 
+/*
+ 
+     {
+        //Propiedad de tipo privada
+        private const double pi = 3.1416;
 
+        //Propiedad de tipo publica
+        public double calculoArea(int radio)
+        { 
+            return pi * radio * radio; 
+        }
 
-*/
+        
+        /*
+         
+         NOTAS
+            - Siempre usar encapsuladores (Modificadores de acceso)
+            - ¿Cuando encapsular? En las constantes
+        
+
+        //CONVENCIONES
+            - Los metodos Public se recomienda que comiencen en mayuscula (PascalCase)
+            - los identificadores NO public deben iniciar con camelCase
+            - Los datos se deben de cambiar desde modificadores de acceso Getter || Setters
+         */
+    
+    
+    }
+ 
+ 
+ 
+ */
