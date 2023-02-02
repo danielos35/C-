@@ -46,6 +46,31 @@ namespace PrimeraApp
             esDeportivo = false;
         }
 
+        /*
+            Sobre carga de constructor:
+                - Se da cuando se tiene mas de un constructor
+                - Se llama al constructor que contenga los parametros que se necesitan
+         */
+        public Coche(int ruedas_, int largo_)
+        {
+            ruedas= ruedas_;
+            largo= largo_;
+        }
+
+
+
+        //Metodos de acceso
+
+        public int getRueadas()
+        {
+            return ruedas;
+        }
+
+        public String getDataCoche()
+        {
+            return $"Este es un coche de {ruedas} ruedas y de {ancho} metros de ancho";
+        }
+
     
     
     }
