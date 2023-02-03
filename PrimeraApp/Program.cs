@@ -26,9 +26,7 @@ namespace PrimeraApp
         {   
                 
 
-            // Comentario para conocer donde vamos
-                           
-                //TODO:
+            Punto origen = new Punto(12,1);
 
 
         }
