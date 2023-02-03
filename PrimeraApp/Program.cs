@@ -21,79 +21,19 @@ namespace PrimeraApp
 
         }
 
-    }
 
-
-    //CLASE
-    partial class Coche
-    {
-        private int ruedas;
-        private int largo;
-        private int ancho;
-        private bool esDeportivo;
-        private string tapiceria;
-
-        /*
-            - El constructor debe tener el mismo nombre de la clase
-            - Dar estado incial al coche
-            - Si no indicamos constructor, la clase toma un contructor por defecto
-         */
-
-        public Coche()
-        {
-            ruedas = 0;
-            largo= 0;
-            ancho = 0;
-            esDeportivo = false;
-        }
-
-        /*
-            Sobre carga de constructor:
-                - Se da cuando se tiene mas de un constructor
-                - Se llama al constructor que contenga los parametros que se necesitan
-         */
-        public Coche(int ruedas_, int largo_)
-        {
-            ruedas= ruedas_;
-            largo= largo_;
-        }
-
-
-
-        //Metodos de acceso
-
-        public int getRueadas() 
-        {
-            return ruedas;
-        }
-
-        public String getDataCoche()
-        {
-            return $"Este es un coche de {ruedas} ruedas y de {ancho} metros de ancho";
-        }
-
-
-       //SETTER
-
-       public void SetEsDeportivo(bool esDeportivo)
+        static void realizarTarea()
         {   
+                
 
-            //Cuando hay problema de ambiguedad al tener un nombre igual en los argumento y en lo propiedades
-            //USAMOS THIS para diferenciar a un campo de clase de un parametro
-            this.esDeportivo = esDeportivo;
+            // Comentario para conocer donde vamos
+                           
+                //TODO:
+
+
         }
 
-    
     }
-
-
-    // PODEMOS DIVIDIR LA CLASE EN DOS TROZOS MEDIANTE PARTIAL
-    partial class Coche
-    {
- 
-
-    }
-
 
 
 
@@ -672,10 +612,82 @@ numeroMayor2 = unchecked(numeroMayor2 + 20);
             - los identificadores NO public deben iniciar con camelCase
             - Los datos se deben de cambiar desde modificadores de acceso Getter || Setters
          */
-    
+
+
+/*
+
+//CLASE
+partial class Coche
+{
+    private int ruedas;
+    private int largo;
+    private int ancho;
+    private bool esDeportivo;
+    private string tapiceria;
+
+    /*
+        - El constructor debe tener el mismo nombre de la clase
+        - Dar estado incial al coche
+        - Si no indicamos constructor, la clase toma un contructor por defecto
+     */
+
+/*
+public Coche()
+{
+    ruedas = 0;
+    largo = 0;
+    ancho = 0;
+    esDeportivo = false;
+}
+
+/*
+    Sobre carga de constructor:
+        - Se da cuando se tiene mas de un constructor
+        - Se llama al constructor que contenga los parametros que se necesitan
+ */
+
+/*
+public Coche(int ruedas_, int largo_)
+{
+    ruedas = ruedas_;
+    largo = largo_;
+}
+
+
+
+//Metodos de acceso
+
+public int getRueadas()
+{
+    return ruedas;
+}
+
+public String getDataCoche()
+{
+    return $"Este es un coche de {ruedas} ruedas y de {ancho} metros de ancho";
+}
+
+
+//SETTER
+
+public void SetEsDeportivo(bool esDeportivo)
+{
+
+    //Cuando hay problema de ambiguedad al tener un nombre igual en los argumento y en lo propiedades
+    //USAMOS THIS para diferenciar a un campo de clase de un parametro
+    this.esDeportivo = esDeportivo;
+}
+
     
     }
- 
- 
- 
- */
+
+
+    // PODEMOS DIVIDIR LA CLASE EN DOS TROZOS MEDIANTE PARTIAL
+    partial class Coche
+{
+
+
+}
+
+
+*/
