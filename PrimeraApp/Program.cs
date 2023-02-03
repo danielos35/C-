@@ -75,9 +75,12 @@ namespace PrimeraApp
 
        //SETTER
 
-       public void SetEsDeportivo(bool loEs)
-        {
-            esDeportivo = loEs;
+       public void SetEsDeportivo(bool esDeportivo)
+        {   
+
+            //Cuando hay problema de ambiguedad al tener un nombre igual en los argumento y en lo propiedades
+            //USAMOS THIS para diferenciar a un campo de clase de un parametro
+            this.esDeportivo = esDeportivo;
         }
 
     
