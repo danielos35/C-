@@ -36,6 +36,7 @@ namespace PrimeraApp
         /*
             - El constructor debe tener el mismo nombre de la clase
             - Dar estado incial al coche
+            - Si no indicamos constructor, la clase toma un contructor por defecto
          */
 
         public Coche()
@@ -61,7 +62,7 @@ namespace PrimeraApp
 
         //Metodos de acceso
 
-        public int getRueadas()
+        public int getRueadas() 
         {
             return ruedas;
         }
@@ -69,6 +70,14 @@ namespace PrimeraApp
         public String getDataCoche()
         {
             return $"Este es un coche de {ruedas} ruedas y de {ancho} metros de ancho";
+        }
+
+
+       //SETTER
+
+       public void SetEsDeportivo(bool loEs)
+        {
+            esDeportivo = loEs;
         }
 
     
