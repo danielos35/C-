@@ -25,7 +25,7 @@ namespace PrimeraApp
 
 
     //CLASE
-    class Coche
+    partial class Coche
     {
         private int ruedas;
         private int largo;
@@ -84,9 +84,15 @@ namespace PrimeraApp
         }
 
     
-    
     }
 
+
+    // PODEMOS DIVIDIR LA CLASE EN DOS TROZOS MEDIANTE PARTIAL
+    partial class Coche
+    {
+ 
+
+    }
 
 
 
