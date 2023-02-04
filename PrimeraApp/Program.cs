@@ -14,24 +14,38 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-
-
-
-
-
+            Auto honda = new Auto();
+            Auto mazda = new Auto();
+            Auto ford = new Auto();
+            Auto chevrolet = new Auto();
+            Auto redbull = new Auto();
+            Console.WriteLine(Auto.getNumeroAutos());
         }
 
+        // METODO Y VARIABLES STATIC
+            // Las variables static son globales para todos los objetos por eso son llamadas variables de clase
+            // Para usarla de debe de llamar a la clase mas no al objeto por ejemplo CLase.contador
+            // Utilizar public para acceder a las variables static
 
-        static void realizarTarea()
-        {   
-                
-
-            Punto origen = new Punto(12,1);
-
-
-        }
 
     }
+
+
+    class Auto 
+    {
+
+        static int numerDeAutos = 0;
+        public Auto() {
+            numerDeAutos ++;
+        }
+
+        public static int getNumeroAutos()
+        {
+            return numerDeAutos;
+        }
+    
+    }
+
 
 
 
@@ -689,3 +703,19 @@ public void SetEsDeportivo(bool esDeportivo)
 
 
 */
+
+/*
+ 
+        static void realizarTarea()
+        {   
+                
+
+            Punto origen = new Punto(12,1);
+            Punto destino = new Punto(12,45);
+            double distancia = origen.DistanciaHasta(destino);
+            Console.WriteLine(distancia);
+
+        }
+ 
+ 
+ */
