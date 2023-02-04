@@ -2,10 +2,6 @@
 using System.Runtime.CompilerServices;
 
 
-// IMPORTAR TODOS LOS METODOS DE UNA CLASE
-    // No se recomienda pues confunde bastante a los programadores que van a revisar el codigo
-using static System.Math;
-
 
 //Este es un espacio donde podemos escribir nuestras clases, pueden haber dos clases llamadas igual en dons nameSpaces diferentes
 namespace PrimeraApp
@@ -18,12 +14,34 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-            // AL IMPORTAR UNA CLASE PODEMOS LLAMAR DIRECTAMENTE SUS METODOS
+            // CLASES ANONIMAS
+                // El tipo de dato de cada atributo , el compilador determina el tipo de variable
 
-            double raiz = Sqrt(9);
-            double potencia = Pow(3, 4);
-            Console.WriteLine( potencia );
-            Console.WriteLine( raiz );
+            var miObjeto = new
+            {
+                nombre = "Daniel",
+                edad = 19
+            };
+
+            Console.WriteLine(miObjeto.edad);
+
+            var miOtraVariable =  new 
+            { 
+                nombre = "Ana", 
+                edad = 18 
+            };
+
+            // DOS OBJETOS CON LAS MISMOS TIPOS DEDATOS PUEDEN SER ASIGNADAS ENTRE ELLAS
+
+            miObjeto = miOtraVariable;
+
+
+            // RESTRICCIONES
+                // Solo pueden contener campos publicos
+                // Todos los campos deben estar iniciados
+                // Los campos no pueden ser static
+                // NO se pueden definir metodo
+
 
         }
 
