@@ -20,12 +20,14 @@ namespace PrimeraApp
             Auto chevrolet = new Auto();
             Auto redbull = new Auto();
             Console.WriteLine(Auto.getNumeroAutos());
+            Console.WriteLine(Auto.numeroConstante);
         }
 
         // METODO Y VARIABLES STATIC
             // Las variables static son globales para todos los objetos por eso son llamadas variables de clase
             // Para usarla de debe de llamar a la clase mas no al objeto por ejemplo CLase.contador
             // Utilizar public para acceder a las variables static
+            // const: todas las contantes en C# se asumen que son static "sin necesidad de agregar la clase static"
 
 
     }
@@ -35,6 +37,8 @@ namespace PrimeraApp
     {
 
         static int numerDeAutos = 0;
+        public const int numeroConstante = 12;
+
         public Auto() {
             numerDeAutos ++;
         }
