@@ -2,6 +2,10 @@
 using System.Runtime.CompilerServices;
 
 
+// IMPORTAR TODOS LOS METODOS DE UNA CLASE
+    // No se recomienda pues confunde bastante a los programadores que van a revisar el codigo
+using static System.Math;
+
 
 //Este es un espacio donde podemos escribir nuestras clases, pueden haber dos clases llamadas igual en dons nameSpaces diferentes
 namespace PrimeraApp
@@ -14,45 +18,24 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-            Auto honda = new Auto();
-            Auto mazda = new Auto();
-            Auto ford = new Auto();
-            Auto chevrolet = new Auto();
-            Auto redbull = new Auto();
-            Console.WriteLine(Auto.getNumeroAutos());
-            Console.WriteLine(Auto.numeroConstante);
+            // AL IMPORTAR UNA CLASE PODEMOS LLAMAR DIRECTAMENTE SUS METODOS
+
+            double raiz = Sqrt(9);
+            double potencia = Pow(3, 4);
+            Console.WriteLine( potencia );
+            Console.WriteLine( raiz );
+
         }
 
-        // METODO Y VARIABLES STATIC
-            // Las variables static son globales para todos los objetos por eso son llamadas variables de clase
-            // Para usarla de debe de llamar a la clase mas no al objeto por ejemplo CLase.contador
-            // Utilizar public para acceder a las variables static
-            // const: todas las contantes en C# se asumen que son static "sin necesidad de agregar la clase static"
 
 
     }
 
 
-    class Auto 
-    {
-
-        static int numerDeAutos = 0;
-        public const int numeroConstante = 12;
-
-        public Auto() {
-            numerDeAutos ++;
-        }
-
-        public static int getNumeroAutos()
-        {
-            return numerDeAutos;
-        }
-    
-    }
-
-
-
-
+    // CLASES ANONIMAS
+        // No suelen tener nombre
+        // Se utiliza para realizar querys a base de datos
+        //
 
 }
 
@@ -720,6 +703,121 @@ public void SetEsDeportivo(bool esDeportivo)
             Console.WriteLine(distancia);
 
         }
+ 
+ 
+ */
+
+
+
+/*
+ 
+STATIC METODOS
+    
+    class Program
+    {
+
+
+
+        static void Main(string[] args)
+        {
+
+            Auto honda = new Auto();
+            Auto mazda = new Auto();
+            Auto ford = new Auto();
+            Auto chevrolet = new Auto();
+            Auto redbull = new Auto();
+            Console.WriteLine(Auto.getNumeroAutos());
+            Console.WriteLine(Auto.numeroConstante);
+        }
+
+        // METODO Y VARIABLES STATIC
+            // Las variables static son globales para todos los objetos por eso son llamadas variables de clase
+            // Para usarla de debe de llamar a la clase mas no al objeto por ejemplo CLase.contador
+            // Utilizar public para acceder a las variables static
+            // const: todas las contantes en C# se asumen que son static "sin necesidad de agregar la clase static"
+
+
+    }
+
+
+    class Auto 
+    {
+
+        static int numerDeAutos = 0;
+        public const int numeroConstante = 12;
+
+        public Auto() {
+            numerDeAutos ++;
+        }
+
+        public static int getNumeroAutos()
+        {
+            return numerDeAutos;
+        }
+    
+    }
+
+
+     
+
+
+ 
+ 
+ 
+ 
+ 
+ */
+
+/*
+
+
+****** IMPORTAR CLASES  PARA LLAMAR DIRECTAMENTE A SUS PROPIEDADES O METODOS *************************
+
+
+
+ using System;
+using System.Runtime.CompilerServices;
+
+
+// IMPORTAR TODOS LOS METODOS DE UNA CLASE
+    // No se recomienda pues confunde bastante a los programadores que van a revisar el codigo
+using static System.Math;
+
+
+//Este es un espacio donde podemos escribir nuestras clases, pueden haber dos clases llamadas igual en dons nameSpaces diferentes
+namespace PrimeraApp
+{
+    class Program
+    {
+
+
+
+        static void Main(string[] args)
+        {
+
+            // AL IMPORTAR UNA CLASE PODEMOS LLAMAR DIRECTAMENTE SUS METODOS
+
+            double raiz = Sqrt(9);
+            double potencia = Pow(3, 4);
+            Console.WriteLine( potencia );
+            Console.WriteLine( raiz );
+
+        }
+
+
+
+    }
+
+
+    // CLASES ANONIMAS
+        // No suelen tener nombre
+        // Se utiliza para realizar querys a base de datos
+        //
+
+}
+ 
+ 
+ 
  
  
  */
