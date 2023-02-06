@@ -27,7 +27,7 @@ namespace PrimeraApp
 
 
                 //Esta es la manera de inicializar arreglos con todos sus valores
-            int[] edades = { 1, 2, 3, 4, 5 };
+            int[] edades = new int[5] { 1, 2, 3, 4, 5 };
 
                 //Si yo no inicializo un arreglo toma por defecto los valores por defecto del tipo de dato
             int[] data = { };
@@ -37,7 +37,52 @@ namespace PrimeraApp
             Console.WriteLine(numeros);
 
 
+
+            //ARRAY IMPLICITO
+
+            //ERROR dado que hay varios tipos de datos var datos = new[] { "test", 1, "test", null};
+            var datos = new[] { "test","", "test", "test" };
+
+
+
+            // ARRAY DE OBJETOS
+            Empleado[] arrayEmpleados = new Empleado[2];
+            arrayEmpleados[0] = new Empleado(12, "Daniel");
+            arrayEmpleados[1] = new Empleado(124, "Daniel M");
+
+
+            //ARRAY CLASES ANONIMAS
+
+            var Personas = new[] 
+                { 
+
+                    //Todos tienen que ser del mismo tipo, y contener los mismos datos || NO es posible almacenar diferente tipo de datos
+                    new {Nombre="Daniel", edad =12},
+                    new {Nombre="Daniel", edad =1243},
+                    new {Nombre="Daniel", edad =143},
+                };
+
+
+            // ARRAY DE VARIAS DIMENSIONES
+            int[,] edadesBidimensiona = new int[4, 2];
+            edadesBidimensiona[0,0] = 2;
+
+
+
         }
+
+        class Empleado {
+
+            String nombre;
+            int edad;
+            public Empleado(int edad, String nombre)
+            {
+                this.nombre = nombre;
+                this.edad = edad;
+            }
+        
+        }
+
 
 
 
@@ -45,9 +90,9 @@ namespace PrimeraApp
 
 
     // CLASES ANONIMAS
-        // No suelen tener nombre
-        // Se utiliza para realizar querys a base de datos
-        //
+    // No suelen tener nombre
+    // Se utiliza para realizar querys a base de datos
+    //
 
 }
 
