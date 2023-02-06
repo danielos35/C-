@@ -14,33 +14,27 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-            // CLASES ANONIMAS
-                // El tipo de dato de cada atributo , el compilador determina el tipo de variable
 
-            var miObjeto = new
-            {
-                nombre = "Daniel",
-                edad = 19
-            };
+            // ARREGLOS
 
-            Console.WriteLine(miObjeto.edad);
-
-            var miOtraVariable =  new 
-            { 
-                nombre = "Ana", 
-                edad = 18 
-            };
-
-            // DOS OBJETOS CON LAS MISMOS TIPOS DEDATOS PUEDEN SER ASIGNADAS ENTRE ELLAS
-
-            miObjeto = miOtraVariable;
+                //Tipo de arreglo |  nombre del arreglo =  inicializar el arreglo [numero de valores que se van almacenar]
+                    //No se guarda en memoria hasta que se inicializa
+            int[] numeros = new int[4];
+            numeros[0] = 1;
+            numeros[1] = 2;
+            numeros[2] = 3;
+            numeros[3] = 4;
 
 
-            // RESTRICCIONES
-                // Solo pueden contener campos publicos
-                // Todos los campos deben estar iniciados
-                // Los campos no pueden ser static
-                // NO se pueden definir metodo
+                //Esta es la manera de inicializar arreglos con todos sus valores
+            int[] edades = { 1, 2, 3, 4, 5 };
+
+                //Si yo no inicializo un arreglo toma por defecto los valores por defecto del tipo de dato
+            int[] data = { };
+                
+                //si le asigno un valor a una posición que no existe tendremos un error
+
+            Console.WriteLine(numeros);
 
 
         }
@@ -835,6 +829,49 @@ namespace PrimeraApp
 }
  
  
+ 
+ 
+ 
+ */
+
+/*
+ 
+ 
+    CLASES ANONIMAS
+
+            static void Main(string[] args)
+        {
+
+            // CLASES ANONIMAS
+                // El tipo de dato de cada atributo , el compilador determina el tipo de variable
+
+            var miObjeto = new
+            {
+                nombre = "Daniel",
+                edad = 19
+            };
+
+            Console.WriteLine(miObjeto.edad);
+
+            var miOtraVariable =  new 
+            { 
+                nombre = "Ana", 
+                edad = 18 
+            };
+
+            // DOS OBJETOS CON LAS MISMOS TIPOS DEDATOS PUEDEN SER ASIGNADAS ENTRE ELLAS
+
+            miObjeto = miOtraVariable;
+
+
+            // RESTRICCIONES
+                // Solo pueden contener campos publicos
+                // Todos los campos deben estar iniciados
+                // Los campos no pueden ser static
+                // NO se pueden definir metodo
+
+
+        }
  
  
  
