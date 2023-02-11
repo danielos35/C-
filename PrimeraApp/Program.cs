@@ -58,14 +58,21 @@ namespace PrimeraApp
 
                     //Todos tienen que ser del mismo tipo, y contener los mismos datos || NO es posible almacenar diferente tipo de datos
                     new {Nombre="Daniel", edad =12},
-                    new {Nombre="Daniel", edad =1243},
-                    new {Nombre="Daniel", edad =143},
+                    new {Nombre="Felipa", edad =1243},
+                    new {Nombre="Marquez", edad =143},
                 };
 
 
             // ARRAY DE VARIAS DIMENSIONES
             int[,] edadesBidimensiona = new int[4, 2];
             edadesBidimensiona[0,0] = 2;
+
+
+            // BUCLE FOR 
+            for( int i = 0; i <= Personas.Length; i++)
+            {
+                Console.WriteLine($"Este es un numero{Personas[i].Nombre}");
+            }
 
 
 
