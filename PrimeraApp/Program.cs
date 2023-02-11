@@ -55,9 +55,10 @@ namespace PrimeraApp
         //PRINCIO DE SUSTITUCION
             // Sustituir un ejemplo por otro
 
-
-
-
+        //POLIMORFISMO
+            // Si una clases tienen un metodo con un mismo nombre que la clase de la que hereda, esta clase anulará el metodo de la clase "Padre" y solo tendrá el declarado en la clase actual, en caso de que uno de sus metodos tenga diferentes parametros, tendriamos sobre carga de metodos
+            //Capacidad de un objeto para comportarse de diferente forma o a tener diferente forma dependiendo del contexto
+    
     }
 
 
@@ -71,6 +72,12 @@ namespace PrimeraApp
         public Mamiferos(String nombre)
         {
             this.nombreSerVivo = nombre;
+        }
+
+        // Virtual abre la posibilidad de modificar el metodo en las diferentes subclases desde la que heredamos
+        public virtual void pensar() 
+        {
+            Console.WriteLine("Pensamiento básico institivo");
         }
 
         public void respirar()
@@ -105,7 +112,9 @@ namespace PrimeraApp
         {
 
         }
-        public void pensar()
+
+        // Para que sea una sobre-escritura del metodo utilizamos la palabra reservada override | el new oculta el metodo anterior 
+        public override void pensar()
         {
             Console.WriteLine("Pienso");
         }
@@ -122,7 +131,12 @@ namespace PrimeraApp
         {
             Console.WriteLine("TREPO");
         }
-    
+
+        public override void pensar()
+        {
+            Console.WriteLine("Pienso como un gorila");
+        }
+
     }
 
 
