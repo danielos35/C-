@@ -17,6 +17,31 @@ namespace PrimeraApp
             Gorila Mico = new Gorila("Gor_1");
 
 
+            // PRINCIPIO DE SUSTITUTCIÓN
+            Mamiferos caballo_2 = new Caballo("Caballo");
+
+                //Pues siempre un caballo será un mamifero
+                //En este caso tendremos todos los metodos de MAMIFERO mas no los de CABALLOl
+
+            // SUSTITUCIÓN | Ejemplo #2
+            Caballo caballo_3 = new Caballo("Caballo#2");
+
+            //Asignamos un objeto de tipo caballo a un mamifero
+            caballo_2 = caballo_3;
+
+
+            //SUSTITUCIÓN CON EL METODO OBJECT
+            Object animal_object = new Gorila("Test_nombre");
+            // El Object abarca a todos los demas objetos
+
+            //POR EJEMPLO EN UN ARRAY DE MAMIFEROS PODEMOS ALMACENAR OBJETOS QUE HEREDEN DE ESTA MISMA CLASE
+
+            Mamiferos[] animales_mamiferos = new Mamiferos[3];
+            animales_mamiferos[0] = Mico;
+            animales_mamiferos[1] = Daniel;
+            animales_mamiferos[2] = horse;
+
+
         }
 
 
@@ -26,6 +51,10 @@ namespace PrimeraApp
 
         //OBJECT
             // TOdos las clases herarám de la clase Object (Por eso es llamada superclase cosmica)
+
+        //PRINCIO DE SUSTITUCION
+            // Sustituir un ejemplo por otro
+
 
 
 
