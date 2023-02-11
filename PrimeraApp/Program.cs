@@ -1,9 +1,4 @@
-﻿using System;
-using System.Runtime.CompilerServices;
-
-
-
-//Este es un espacio donde podemos escribir nuestras clases, pueden haber dos clases llamadas igual en dons nameSpaces diferentes
+﻿//Este es un espacio donde podemos escribir nuestras clases, pueden haber dos clases llamadas igual en dons nameSpaces diferentes
 namespace PrimeraApp
 {
     class Program
@@ -15,11 +10,18 @@ namespace PrimeraApp
         {
             
             
+            // TODOS ESTOS OBJETOS COMPARTEN LAS MISMAS CARACTERISTICAS DE LA CLASE PADRE
+            
+            Caballo horse = new Caballo();
+            Humano Daniel = new Humano();
+            Gorila Mico = new Gorila();
+
+
         }
 
 
         //Herencia
-            // Es el mismo concepto de la herencia en la vida real
+        // Es el mismo concepto de la herencia en la vida real
 
         // Principio "es-un" : un jefe "es un" empleado? | si la respuesta es si, debe de existir herencia
 
@@ -27,7 +29,63 @@ namespace PrimeraApp
 
 
 
+
     }
+
+
+
+
+    class Mamiferos
+    {
+        public void respirar()
+        {
+            Console.WriteLine("RESPIRAMOS");
+        }
+
+
+        public void cuidarCrias()
+        {
+            Console.WriteLine("CUIDAMOS DE LAS CRIAS");
+        }    
+    }
+
+
+    //APLICAR LA HERENCIA A UNA CLASE
+    class Caballo: Mamiferos
+    {
+          public void galopar()
+        {
+            Console.WriteLine("Galopar");
+        }
+    }
+
+    class Humano: Mamiferos
+    {
+        public void pensar()
+        {
+            Console.WriteLine("Pienso");
+         }
+    }
+
+    class Gorila : Mamiferos
+    { 
+        public void trepar()
+        {
+            Console.WriteLine("TREPO")
+        }
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
     // CLASES ANONIMAS
