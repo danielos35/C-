@@ -15,65 +15,6 @@ namespace PrimeraApp
         {
 
 
-            // ARREGLOS
-
-                //Tipo de arreglo |  nombre del arreglo =  inicializar el arreglo [numero de valores que se van almacenar]
-                    //No se guarda en memoria hasta que se inicializa
-            int[] numeros = new int[4];
-            numeros[0] = 1;
-            numeros[1] = 2;
-            numeros[2] = 3;
-            numeros[3] = 4;
-
-
-                //Esta es la manera de inicializar arreglos con todos sus valores
-            int[] edades = new int[5] { 1, 2, 3, 4, 5 };
-
-                //Si yo no inicializo un arreglo toma por defecto los valores por defecto del tipo de dato
-            int[] data = { };
-                
-                //si le asigno un valor a una posición que no existe tendremos un error
-
-            Console.WriteLine(numeros);
-
-
-
-            //ARRAY IMPLICITO
-
-            //ERROR dado que hay varios tipos de datos var datos = new[] { "test", 1, "test", null};
-            var datos = new[] { "test","", "test", "test" };
-
-
-
-            // ARRAY DE OBJETOS
-            Empleado[] arrayEmpleados = new Empleado[2];
-            arrayEmpleados[0] = new Empleado(12, "Daniel");
-            arrayEmpleados[1] = new Empleado(124, "Daniel M");
-
-
-            //ARRAY CLASES ANONIMAS
-
-            var Personas = new[] 
-                { 
-
-                    //Todos tienen que ser del mismo tipo, y contener los mismos datos || NO es posible almacenar diferente tipo de datos
-                    new {Nombre="Daniel", edad =12},
-                    new {Nombre="Felipa", edad =1243},
-                    new {Nombre="Marquez", edad =143},
-                };
-
-
-            // ARRAY DE VARIAS DIMENSIONES
-            int[,] edadesBidimensiona = new int[4, 2];
-            edadesBidimensiona[0,0] = 2;
-
-
-            // BUCLE FOR 
-            for( int i = 0; i <= Personas.Length; i++)
-            {
-                Console.WriteLine($"Este es un numero{Personas[i].Nombre}");
-            }
-
 
 
         }
@@ -924,6 +865,83 @@ namespace PrimeraApp
 
 
         }
+ 
+ 
+ 
+ */
+
+/*
+ 
+ 
+            // ARREGLOS
+
+                //Tipo de arreglo |  nombre del arreglo =  inicializar el arreglo [numero de valores que se van almacenar]
+                    //No se guarda en memoria hasta que se inicializa
+            int[] numeros = new int[4];
+            numeros[0] = 1;
+            numeros[1] = 2;
+            numeros[2] = 3;
+            numeros[3] = 4;
+
+
+                //Esta es la manera de inicializar arreglos con todos sus valores
+            int[] edades = new int[5] { 1, 2, 3, 4, 5 };
+
+                //Si yo no inicializo un arreglo toma por defecto los valores por defecto del tipo de dato
+            int[] data = { };
+                
+                //si le asigno un valor a una posición que no existe tendremos un error
+
+            Console.WriteLine(numeros);
+
+
+
+            //ARRAY IMPLICITO
+
+            //ERROR dado que hay varios tipos de datos var datos = new[] { "test", 1, "test", null};
+            var datos = new[] { "test","", "test", "test" };
+
+
+
+            // ARRAY DE OBJETOS
+            Empleado[] arrayEmpleados = new Empleado[2];
+            arrayEmpleados[0] = new Empleado(12, "Daniel");
+            arrayEmpleados[1] = new Empleado(124, "Daniel M");
+
+
+            //ARRAY CLASES ANONIMAS
+
+            var Personas = new[] 
+                { 
+
+                    //Todos tienen que ser del mismo tipo, y contener los mismos datos || NO es posible almacenar diferente tipo de datos
+                    new {Nombre="Daniel", edad =12},
+                    new {Nombre="Felipa", edad =1243},
+                    new {Nombre="Marquez", edad =143},
+                };
+
+
+            // ARRAY DE VARIAS DIMENSIONES
+            int[,] edadesBidimensiona = new int[4, 2];
+            edadesBidimensiona[0,0] = 2;
+
+
+            // BUCLE FOR 
+            for( int i = 0; i <= Personas.Length; i++)
+            {
+          
+            }
+
+
+            //FOR EACH
+                //Solo permite ver la info, no permite modificar los datos
+            
+            foreach(var numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
+
+
  
  
  
