@@ -12,21 +12,20 @@ namespace PrimeraApp
             
             // TODOS ESTOS OBJETOS COMPARTEN LAS MISMAS CARACTERISTICAS DE LA CLASE PADRE
             
-            Caballo horse = new Caballo();
-            Humano Daniel = new Humano();
-            Gorila Mico = new Gorila();
+            Caballo horse = new Caballo("Cab_1");
+            Humano Daniel = new Humano("Hum_2");
+            Gorila Mico = new Gorila("Gor_1");
 
 
         }
 
 
         //Herencia
-        // Es el mismo concepto de la herencia en la vida real
+            // Es el mismo concepto de la herencia en la vida real
+            // Principio "es-un" : un jefe "es un" empleado? | si la respuesta es si, debe de existir herencia
 
-        // Principio "es-un" : un jefe "es un" empleado? | si la respuesta es si, debe de existir herencia
-
-
-
+        //OBJECT
+            // TOdos las clases herarám de la clase Object (Por eso es llamada superclase cosmica)
 
 
 
@@ -37,6 +36,14 @@ namespace PrimeraApp
 
     class Mamiferos
     {
+
+        private String nombreSerVivo;
+
+        public Mamiferos(String nombre)
+        {
+            this.nombreSerVivo = nombre;
+        }
+
         public void respirar()
         {
             Console.WriteLine("RESPIRAMOS");
@@ -53,6 +60,10 @@ namespace PrimeraApp
     //APLICAR LA HERENCIA A UNA CLASE
     class Caballo: Mamiferos
     {
+        public Caballo(String nombreCaballo) : base(nombreCaballo)
+        {
+
+        }
           public void galopar()
         {
             Console.WriteLine("Galopar");
@@ -61,17 +72,26 @@ namespace PrimeraApp
 
     class Humano: Mamiferos
     {
+        public Humano(String nombreHumano) : base(nombreHumano)
+        {
+
+        }
         public void pensar()
         {
             Console.WriteLine("Pienso");
-         }
+        }
     }
 
     class Gorila : Mamiferos
     { 
+
+        public Gorila(String nombreGorila) : base(nombreGorila)
+        {
+
+        }
         public void trepar()
         {
-            Console.WriteLine("TREPO")
+            Console.WriteLine("TREPO");
         }
     
     }
