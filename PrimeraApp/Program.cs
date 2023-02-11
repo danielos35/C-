@@ -13,38 +13,16 @@ namespace PrimeraApp
 
         static void Main(string[] args)
         {
-            int[] numeros = new int[4];
-            numeros[0] = 3;
-            numeros[1] = 3;
-            numeros[2] = 3;
-            numeros[2] = 3;
-
-            RecorrerArreglo(numeros);
-
-
+            
+            
         }
 
 
-        static void RecorrerArreglo(int[] datos)
-        {
-            foreach(int dato in datos)
-            {
-                Console.WriteLine(dato);
-            }
-        }
+        //Herencia
+            // Es el mismo concepto de la herencia en la vida real
 
+        // Principio "es-un" : un jefe "es un" empleado? | si la respuesta es si, debe de existir herencia
 
-        class Empleado {
-
-            String nombre;
-            int edad;
-            public Empleado(int edad, String nombre)
-            {
-                this.nombre = nombre;
-                this.edad = edad;
-            }
-        
-        }
 
 
 
@@ -958,6 +936,34 @@ namespace PrimeraApp
 
 
  
+ 
+ 
+ */
+
+
+/*
+ ARRAY
+
+        static void RecorrerArreglo(int[] datos)
+        {
+            foreach(int dato in datos)
+            {
+                Console.WriteLine(dato);
+            }
+        }
+
+
+        class Empleado {
+
+            String nombre;
+            int edad;
+            public Empleado(int edad, String nombre)
+            {
+                this.nombre = nombre;
+                this.edad = edad;
+            }
+        
+        }
  
  
  */
