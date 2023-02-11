@@ -13,11 +13,26 @@ namespace PrimeraApp
 
         static void Main(string[] args)
         {
+            int[] numeros = new int[4];
+            numeros[0] = 3;
+            numeros[1] = 3;
+            numeros[2] = 3;
+            numeros[2] = 3;
 
-
+            RecorrerArreglo(numeros);
 
 
         }
+
+
+        static void RecorrerArreglo(int[] datos)
+        {
+            foreach(int dato in datos)
+            {
+                Console.WriteLine(dato);
+            }
+        }
+
 
         class Empleado {
 
