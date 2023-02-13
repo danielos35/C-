@@ -1088,3 +1088,66 @@ namespace PrimeraApp
  
  
  */
+
+/*
+ * 
+ * 
+ * HERENCIA
+ 
+         static void Main(string[] args)
+        {
+            
+            
+            // TODOS ESTOS OBJETOS COMPARTEN LAS MISMAS CARACTERISTICAS DE LA CLASE PADRE
+            
+            Caballo horse = new Caballo("Cab_1");
+            Humano Daniel = new Humano("Hum_2");
+            Gorila Mico = new Gorila("Gor_1");
+
+
+            // PRINCIPIO DE SUSTITUTCIÓN
+            Mamiferos caballo_2 = new Caballo("Caballo");
+
+                //Pues siempre un caballo será un mamifero
+                //En este caso tendremos todos los metodos de MAMIFERO mas no los de CABALLOl
+
+            // SUSTITUCIÓN | Ejemplo #2
+            Caballo caballo_3 = new Caballo("Caballo#2");
+
+            //Asignamos un objeto de tipo caballo a un mamifero
+            caballo_2 = caballo_3;
+
+
+            //SUSTITUCIÓN CON EL METODO OBJECT
+            Object animal_object = new Gorila("Test_nombre");
+            // El Object abarca a todos los demas objetos
+
+            //POR EJEMPLO EN UN ARRAY DE MAMIFEROS PODEMOS ALMACENAR OBJETOS QUE HEREDEN DE ESTA MISMA CLASE
+
+            Mamiferos[] animales_mamiferos = new Mamiferos[3];
+            animales_mamiferos[0] = Mico;
+            animales_mamiferos[1] = Daniel;
+            animales_mamiferos[2] = horse;
+
+
+        }
+
+
+        //Herencia
+            // Es el mismo concepto de la herencia en la vida real
+            // Principio "es-un" : un jefe "es un" empleado? | si la respuesta es si, debe de existir herencia
+
+        //OBJECT
+            // TOdos las clases herarám de la clase Object (Por eso es llamada superclase cosmica)
+
+        //PRINCIO DE SUSTITUCION
+            // Sustituir un ejemplo por otro
+
+        //POLIMORFISMO
+            // Si una clases tienen un metodo con un mismo nombre que la clase de la que hereda, esta clase anulará el metodo de la clase "Padre" y solo tendrá el declarado en la clase actual, en caso de que uno de sus metodos tenga diferentes parametros, tendriamos sobre carga de metodos
+            //Capacidad de un objeto para comportarse de diferente forma o a tener diferente forma dependiendo del contexto
+    
+ 
+ 
+ 
+ */
