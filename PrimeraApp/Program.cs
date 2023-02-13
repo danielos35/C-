@@ -10,151 +10,40 @@ namespace PrimeraApp
         {
             
             
-            // TODOS ESTOS OBJETOS COMPARTEN LAS MISMAS CARACTERISTICAS DE LA CLASE PADRE
-            
-            Caballo horse = new Caballo("Cab_1");
-            Humano Daniel = new Humano("Hum_2");
-            Gorila Mico = new Gorila("Gor_1");
-
-
-            // PRINCIPIO DE SUSTITUTCIÓN
-            Mamiferos caballo_2 = new Caballo("Caballo");
-
-                //Pues siempre un caballo será un mamifero
-                //En este caso tendremos todos los metodos de MAMIFERO mas no los de CABALLOl
-
-            // SUSTITUCIÓN | Ejemplo #2
-            Caballo caballo_3 = new Caballo("Caballo#2");
-
-            //Asignamos un objeto de tipo caballo a un mamifero
-            caballo_2 = caballo_3;
-
-
-            //SUSTITUCIÓN CON EL METODO OBJECT
-            Object animal_object = new Gorila("Test_nombre");
-            // El Object abarca a todos los demas objetos
-
-            //POR EJEMPLO EN UN ARRAY DE MAMIFEROS PODEMOS ALMACENAR OBJETOS QUE HEREDEN DE ESTA MISMA CLASE
-
-            Mamiferos[] animales_mamiferos = new Mamiferos[3];
-            animales_mamiferos[0] = Mico;
-            animales_mamiferos[1] = Daniel;
-            animales_mamiferos[2] = horse;
-
 
         }
 
 
-        //Herencia
-            // Es el mismo concepto de la herencia en la vida real
-            // Principio "es-un" : un jefe "es un" empleado? | si la respuesta es si, debe de existir herencia
+        //INTERFACES
+            //Los nombres de las interfaces en C# se acostumbra iniciar por I mayuscula
+            //No debe de contar con modificador de acceso
+            //Las interfaces en C# solo contienen metodos y eventos
+            //Su funcionamiento es similar a typeScript a diferencia de que en este caso solo se pueden colcar metodos NO propiedades
+    
+    }
+    interface IComida
+    {
+       public int Calcularcalorias();
+    }
 
-        //OBJECT
-            // TOdos las clases herarám de la clase Object (Por eso es llamada superclase cosmica)
-
-        //PRINCIO DE SUSTITUCION
-            // Sustituir un ejemplo por otro
-
-        //POLIMORFISMO
-            // Si una clases tienen un metodo con un mismo nombre que la clase de la que hereda, esta clase anulará el metodo de la clase "Padre" y solo tendrá el declarado en la clase actual, en caso de que uno de sus metodos tenga diferentes parametros, tendriamos sobre carga de metodos
-            //Capacidad de un objeto para comportarse de diferente forma o a tener diferente forma dependiendo del contexto
+    class Comida{
+        int data;
+        Comida(int data) {
+        this.data = data;
+        }
     
     }
 
 
-
-
-    class Mamiferos
+    class ComidaRapida: IComida
     {
-
-        private String nombreSerVivo;
-
-        public Mamiferos(String nombre)
+        public int Calcularcalorias()
         {
-            this.nombreSerVivo = nombre;
-        }
-
-        // Virtual abre la posibilidad de modificar el metodo en las diferentes subclases desde la que heredamos
-        public virtual void pensar() 
-        {
-            Console.WriteLine("Pensamiento básico institivo");
-        }
-
-        public void respirar()
-        {
-            Console.WriteLine("RESPIRAMOS");
-        }
-
-
-        public void cuidarCrias()
-        {
-            Console.WriteLine("CUIDAMOS DE LAS CRIAS");
-        }    
-    }
-
-
-    //APLICAR LA HERENCIA A UNA CLASE
-    class Caballo: Mamiferos
-    {
-        public Caballo(String nombreCaballo) : base(nombreCaballo)
-        {
-
-        }
-          public void galopar()
-        {
-            Console.WriteLine("Galopar");
+            return 12;
         }
     }
 
-    class Humano: Mamiferos
-    {
-        public Humano(String nombreHumano) : base(nombreHumano)
-        {
 
-        }
-
-        // Para que sea una sobre-escritura del metodo utilizamos la palabra reservada override | el new oculta el metodo anterior 
-        public override void pensar()
-        {
-            Console.WriteLine("Pienso");
-        }
-    }
-
-    class Gorila : Mamiferos
-    { 
-
-        public Gorila(String nombreGorila) : base(nombreGorila)
-        {
-
-        }
-        public void trepar()
-        {
-            Console.WriteLine("TREPO");
-        }
-
-        public override void pensar()
-        {
-            Console.WriteLine("Pienso como un gorila");
-        }
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // CLASES ANONIMAS
-    // No suelen tener nombre
-    // Se utiliza para realizar querys a base de datos
-    //
 
 }
 
@@ -1147,6 +1036,130 @@ namespace PrimeraApp
             // Si una clases tienen un metodo con un mismo nombre que la clase de la que hereda, esta clase anulará el metodo de la clase "Padre" y solo tendrá el declarado en la clase actual, en caso de que uno de sus metodos tenga diferentes parametros, tendriamos sobre carga de metodos
             //Capacidad de un objeto para comportarse de diferente forma o a tener diferente forma dependiendo del contexto
     
+ 
+  class Mamiferos
+    {
+
+        private String nombreSerVivo;
+
+        public Mamiferos(String nombre)
+        {
+            this.nombreSerVivo = nombre;
+        }
+
+        // Virtual abre la posibilidad de modificar el metodo en las diferentes subclases desde la que heredamos
+        public virtual void pensar() 
+        {
+            Console.WriteLine("Pensamiento básico institivo");
+        }
+
+        public void respirar()
+        {
+            Console.WriteLine("RESPIRAMOS");
+        }
+
+
+        public void cuidarCrias()
+        {
+            Console.WriteLine("CUIDAMOS DE LAS CRIAS");
+        }    
+    }
+
+
+    //APLICAR LA HERENCIA A UNA CLASE
+    class Caballo: Mamiferos
+    {
+        public Caballo(String nombreCaballo) : base(nombreCaballo)
+        {
+
+        }
+          public void galopar()
+        {
+            Console.WriteLine("Galopar");
+        }
+    }
+
+    class Humano: Mamiferos
+    {
+        public Humano(String nombreHumano) : base(nombreHumano)
+        {
+
+        }
+
+        // Para que sea una sobre-escritura del metodo utilizamos la palabra reservada override | el new oculta el metodo anterior 
+        public override void pensar()
+        {
+            Console.WriteLine("Pienso");
+        }
+    }
+
+    class Gorila : Mamiferos
+    { 
+
+        public Gorila(String nombreGorila) : base(nombreGorila)
+        {
+
+        }
+        public void trepar()
+        {
+            Console.WriteLine("TREPO");
+        }
+
+        public override void pensar()
+        {
+            Console.WriteLine("Pienso como un gorila");
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // CLASES ANONIMAS
+    // No suelen tener nombre
+    // Se utiliza para realizar querys a base de datos
+    //
+ 
+
+
+       //Herencia
+            // Es el mismo concepto de la herencia en la vida real
+            // Principio "es-un" : un jefe "es un" empleado? | si la respuesta es si, debe de existir herencia
+
+        //OBJECT
+            // TOdos las clases herarám de la clase Object (Por eso es llamada superclase cosmica)
+
+        //PRINCIO DE SUSTITUCION
+            // Sustituir un ejemplo por otro
+
+        //POLIMORFISMO
+            // Si una clases tienen un metodo con un mismo nombre que la clase de la que hereda, esta clase anulará el metodo de la clase "Padre" y solo tendrá el declarado en la clase actual, en caso de que uno de sus metodos tenga diferentes parametros, tendriamos sobre carga de metodos
+            //Capacidad de un objeto para comportarse de diferente forma o a tener diferente forma dependiendo del contexto
+ 
+ */
+
+
+
+/*
+
+
+    //MODIFICADORES DE ACCESO
+        // Public, podemos acceder desde cualquier clase (No es recomendable declarar las variables como public, la información fluye normalmente por medio de set y get)
+        // Private, accesible solo desde la clase mamifero (Encapsulamiento)
+        // protected, es accesible desde la clase en donde se declare y de aquellas clases que hereden
+        //
+  
+
+
  
  
  
