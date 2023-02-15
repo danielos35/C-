@@ -20,7 +20,8 @@ namespace PrimeraApp
             // Las interfaces en C# solo contienen metodos y eventos
             // Su funcionamiento es similar a typeScript a diferencia de que en este caso solo se pueden colcar metodos NO propiedades
             // Las interfaces nos obligan a implementar un metodo en particular
-            // 
+            // Podemos usar varias interfaces para una sola clase
+         
     
     }
     interface IComida
@@ -29,6 +30,10 @@ namespace PrimeraApp
         public bool comeArroz();
     }
 
+    interface IEsSaludable
+    {
+        public int CalcularcaloriasSaludables();
+    }
     class Comida{
         int data;
         Comida(int data) {
@@ -38,7 +43,7 @@ namespace PrimeraApp
     }
 
 
-    class ComidaRapida: IComida
+    class ComidaRapida: IComida, IEsSaludable
     {
          public int Calcularcalorias()
         {
@@ -48,6 +53,11 @@ namespace PrimeraApp
         public bool comeArroz()
         {
             return true;
+        }
+
+        public int CalcularcaloriasSaludables()
+        {
+            return 1;
         }
     }
 
