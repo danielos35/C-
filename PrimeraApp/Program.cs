@@ -8,7 +8,12 @@ namespace PrimeraApp
 
         static void Main(string[] args)
         {
-            
+
+            ComidaRapida papas = new ComidaRapida();
+
+            // Llamar metodo com ambiguedad
+            IComida Ipapas = papas;
+            Ipapas.comeArroz();
             
 
         }
@@ -21,6 +26,13 @@ namespace PrimeraApp
             // Su funcionamiento es similar a typeScript a diferencia de que en este caso solo se pueden colcar metodos NO propiedades
             // Las interfaces nos obligan a implementar un metodo en particular
             // Podemos usar varias interfaces para una sola clase
+
+        //RESTRICCIONES
+            // No se permite definir variables
+            // No se puede definir destructores
+            // No se pueden especificar modificadores de acceso en métodos (Todos son public de forma implícita)
+            // No se pueden anidar clases ni otro tipo de estructuras
+
          
     
     }
