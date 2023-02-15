@@ -8,80 +8,19 @@ namespace PrimeraApp
 
         static void Main(string[] args)
         {
-
-            ComidaRapida papas = new ComidaRapida();
-
-            // Llamar metodo com ambiguedad
-            IComida Ipapas = papas;
-            Ipapas.comeArroz();
             
 
         }
+        
+        // CLASES ABSTRACTAS
+            // Una clase que hace menos, cosas o que es capaz de hacer menos cosas en la aplicación
+            // Cuando tenemos al menos un tedo abstracto, la clase debe de ser abstracta
 
+        // METODO ABSTRACTO
+            // Un metodo que no está desarrollado y que solo tiene una declaración
 
-        //INTERFACES
-            // Los nombres de las interfaces en C# se acostumbra iniciar por I mayuscula
-            // No debe de contar con modificador de acceso
-            // Las interfaces en C# solo contienen metodos y eventos
-            // Su funcionamiento es similar a typeScript a diferencia de que en este caso solo se pueden colcar metodos NO propiedades
-            // Las interfaces nos obligan a implementar un metodo en particular
-            // Podemos usar varias interfaces para una sola clase
-
-        //RESTRICCIONES
-            // No se permite definir variables
-            // No se puede definir destructores
-            // No se pueden especificar modificadores de acceso en métodos (Todos son public de forma implícita)
-            // No se pueden anidar clases ni otro tipo de estructuras
-
-         
     
     }
-    interface IComida
-    {
-        public int Calcularcalorias();
-        public bool comeArroz();
-    }
-
-    interface IEsSaludable
-    {
-        public int CalcularcaloriasSaludables();
-        public bool comeArroz();
-    }
-    class Comida{
-        int data;
-        Comida(int data) {
-        this.data = data;
-        }
-    
-    }
-
-
-    class ComidaRapida: IComida, IEsSaludable
-    {
-         public int Calcularcalorias()
-        {
-            return 12;
-        }
-            
-
-        //Cuando tenemos una ambiguedad (Dos interfaces que tienen un mismo metodo) podemos indentificar el metodo, quitando el modificador de acceso y anteponiendo el nombre de la interface
-        bool IComida.comeArroz()
-        {
-            return true;
-        }
-
-        bool IEsSaludable.comeArroz()
-        {
-            return true;
-        }
-
-
-        public int CalcularcaloriasSaludables()
-        {
-            return 1;
-        }
-    }
-
 
 
 }
@@ -1199,6 +1138,96 @@ namespace PrimeraApp
   
 
 
+ 
+ 
+ 
+ */
+
+
+/*
+ 
+  class Program
+    {
+
+
+
+        static void Main(string[] args)
+        {
+
+            ComidaRapida papas = new ComidaRapida();
+
+            // Llamar metodo com ambiguedad
+            IComida Ipapas = papas;
+            Ipapas.comeArroz();
+            
+
+        }
+
+
+        //INTERFACES
+            // Los nombres de las interfaces en C# se acostumbra iniciar por I mayuscula
+            // No debe de contar con modificador de acceso
+            // Las interfaces en C# solo contienen metodos y eventos
+            // Su funcionamiento es similar a typeScript a diferencia de que en este caso solo se pueden colcar metodos NO propiedades
+            // Las interfaces nos obligan a implementar un metodo en particular
+            // Podemos usar varias interfaces para una sola clase
+
+        //RESTRICCIONES
+            // No se permite definir variables
+            // No se puede definir destructores
+            // No se pueden especificar modificadores de acceso en métodos (Todos son public de forma implícita)
+            // No se pueden anidar clases ni otro tipo de estructuras
+
+         
+    
+    }
+    interface IComida
+    {
+        public int Calcularcalorias();
+        public bool comeArroz();
+    }
+
+    interface IEsSaludable
+    {
+        public int CalcularcaloriasSaludables();
+        public bool comeArroz();
+    }
+    class Comida{
+        int data;
+        Comida(int data) {
+        this.data = data;
+        }
+    
+    }
+
+
+    class ComidaRapida: IComida, IEsSaludable
+    {
+         public int Calcularcalorias()
+        {
+            return 12;
+        }
+            
+
+        //Cuando tenemos una ambiguedad (Dos interfaces que tienen un mismo metodo) podemos indentificar el metodo, quitando el modificador de acceso y anteponiendo el nombre de la interface
+        bool IComida.comeArroz()
+        {
+            return true;
+        }
+
+        bool IEsSaludable.comeArroz()
+        {
+            return true;
+        }
+
+
+        public int CalcularcaloriasSaludables()
+        {
+            return 1;
+        }
+    }
+
+ 
  
  
  
