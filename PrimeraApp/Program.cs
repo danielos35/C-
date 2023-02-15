@@ -33,6 +33,7 @@ namespace PrimeraApp
     interface IEsSaludable
     {
         public int CalcularcaloriasSaludables();
+        public bool comeArroz();
     }
     class Comida{
         int data;
@@ -49,11 +50,19 @@ namespace PrimeraApp
         {
             return 12;
         }
+            
 
-        public bool comeArroz()
+        //Cuando tenemos una ambiguedad (Dos interfaces que tienen un mismo metodo) podemos indentificar el metodo, quitando el modificador de acceso y anteponiendo el nombre de la interface
+        bool IComida.comeArroz()
         {
             return true;
         }
+
+        bool IEsSaludable.comeArroz()
+        {
+            return true;
+        }
+
 
         public int CalcularcaloriasSaludables()
         {
