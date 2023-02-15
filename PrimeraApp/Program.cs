@@ -15,15 +15,18 @@ namespace PrimeraApp
 
 
         //INTERFACES
-            //Los nombres de las interfaces en C# se acostumbra iniciar por I mayuscula
-            //No debe de contar con modificador de acceso
-            //Las interfaces en C# solo contienen metodos y eventos
-            //Su funcionamiento es similar a typeScript a diferencia de que en este caso solo se pueden colcar metodos NO propiedades
+            // Los nombres de las interfaces en C# se acostumbra iniciar por I mayuscula
+            // No debe de contar con modificador de acceso
+            // Las interfaces en C# solo contienen metodos y eventos
+            // Su funcionamiento es similar a typeScript a diferencia de que en este caso solo se pueden colcar metodos NO propiedades
+            // Las interfaces nos obligan a implementar un metodo en particular
+            // 
     
     }
     interface IComida
     {
-       public int Calcularcalorias();
+        public int Calcularcalorias();
+        public bool comeArroz();
     }
 
     class Comida{
@@ -37,9 +40,14 @@ namespace PrimeraApp
 
     class ComidaRapida: IComida
     {
-        public int Calcularcalorias()
+         public int Calcularcalorias()
         {
             return 12;
+        }
+
+        public bool comeArroz()
+        {
+            return true;
         }
     }
 
