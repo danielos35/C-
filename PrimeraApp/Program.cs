@@ -9,53 +9,69 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-            Lagartija Juan = new Lagartija();
-            Juan.respirar();
         }
 
-        // CLASES ABSTRACTAS
-        // Una clase que hace menos, cosas o que es capaz de hacer menos cosas en la aplicación
-        // Cuando tenemos al menos un metedo abstracto, la clase debe de ser abstracta
+        //CLASES SELLADAS (Sealed)
+        // Clase de la cual no se va a poder herdar
+        // Al usar selead No permite heredar la clase
 
-        // METODO ABSTRACTO
-        // Un metodo que no está desarrollado y que solo tiene una declaración
-
-
-        //DECLARACIÓN
-        abstract class Animales
-        { 
-            public void respirar()
-            {
-                Console.WriteLine("Soy capaz de respirar");
-            }
+        //METODOS SELLADOS (Sealed)
+        // Al igual que las clases evitan la psoibilidad de herencia
 
 
-            //Hobliga a todas las clases que hereden esta clase a utilizar el metodo getNombre
-            public abstract void getNombre();
-
-
-        }
-
-
-        class Mamiferos : Animales {
-
-            public override void getNombre()
-            {
-                Console.WriteLine("Nombre de un mamifero")
-            }
-
-        }
-
-
-        class Lagartija : Animales
+        /*
+        sealed class Mamiferos 
         {
-            public override void getNombre()
+     
+            public Mamiferos(int numero)
             {
-                Console.WriteLine("Soy una lagartija")
+                Console.WriteLine(numero);
+            }
+            public  void getNombre()
+            {
+                Console.WriteLine("Nombre de un mamifero");
+            }
+
+        }
+
+        */
+        class Animal { 
+        
+            public virtual void getNombre()
+            {
+
             }
         }
 
 
+        class Mamiferos: Animal
+         {
+
+             public Mamiferos(int numero)
+             {
+                 Console.WriteLine(numero);
+             }
+
+
+            // Los saled metodos NO pueden ser sobreescritos
+            public sealed override void getNombre()
+             {
+                 Console.WriteLine("Nombre de un mamifero");
+             }
+
+         }
+
+   
+        class Humano:Mamiferos
+        { 
+        
+            public Humano(int numero):base(numero)
+            {
+                Console.WriteLine(numero);
+            }
+        
+        
+        }
 
     }
 
@@ -1264,6 +1280,82 @@ namespace PrimeraApp
         }
     }
 
+ 
+ 
+ 
+ 
+ */
+
+
+/*
+ * 
+ * 
+ * 
+ * CLASE ABSTRACTA
+ 
+         static void Main(string[] args)
+        {
+
+            Lagartija Juan = new Lagartija();
+            Juan.respirar();
+        }
+
+        // CLASES ABSTRACTAS
+        // Una clase que hace menos, cosas o que es capaz de hacer menos cosas en la aplicación
+        // Cuando tenemos al menos un metedo abstracto, la clase debe de ser abstracta
+
+        // METODO ABSTRACTO
+        // Un metodo que no está desarrollado y que solo tiene una declaración
+
+
+        //DECLARACIÓN
+        abstract class Animales
+        { 
+            public void respirar()
+            {
+                Console.WriteLine("Soy capaz de respirar");
+            }
+
+
+            //Hobliga a todas las clases que hereden esta clase a utilizar el metodo getNombre
+            public abstract void getNombre();
+
+
+        }
+
+
+        class Mamiferos : Animales {
+
+            public override void getNombre()
+            {
+                Console.WriteLine("Nombre de un mamifero");
+            }
+
+        }
+
+
+        class Lagartija : Animales
+        {
+            public override void getNombre()
+            {
+                Console.WriteLine("Soy una lagartija");
+            }
+        }
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
