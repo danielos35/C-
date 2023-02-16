@@ -8,18 +8,55 @@ namespace PrimeraApp
 
         static void Main(string[] args)
         {
-            
 
+            Lagartija Juan = new Lagartija();
+            Juan.respirar();
         }
-        
+
         // CLASES ABSTRACTAS
-            // Una clase que hace menos, cosas o que es capaz de hacer menos cosas en la aplicación
-            // Cuando tenemos al menos un tedo abstracto, la clase debe de ser abstracta
+        // Una clase que hace menos, cosas o que es capaz de hacer menos cosas en la aplicación
+        // Cuando tenemos al menos un metedo abstracto, la clase debe de ser abstracta
 
         // METODO ABSTRACTO
-            // Un metodo que no está desarrollado y que solo tiene una declaración
+        // Un metodo que no está desarrollado y que solo tiene una declaración
 
-    
+
+        //DECLARACIÓN
+        abstract class Animales
+        { 
+            public void respirar()
+            {
+                Console.WriteLine("Soy capaz de respirar");
+            }
+
+
+            //Hobliga a todas las clases que hereden esta clase a utilizar el metodo getNombre
+            public abstract void getNombre();
+
+
+        }
+
+
+        class Mamiferos : Animales {
+
+            public override void getNombre()
+            {
+                Console.WriteLine("Nombre de un mamifero")
+            }
+
+        }
+
+
+        class Lagartija : Animales
+        {
+            public override void getNombre()
+            {
+                Console.WriteLine("Soy una lagartija")
+            }
+        }
+
+
+
     }
 
 
