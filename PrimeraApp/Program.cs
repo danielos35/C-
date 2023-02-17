@@ -28,10 +28,17 @@ namespace PrimeraApp
         public double SALARIO
         { 
                get { return this.salario;  }
-               set { this.salario = evaluarSalario(value);  } 
+               set { this.salario = evaluarSalario(value); } 
         }
-    
-    
+
+        //Otra sintaxis
+        public double _salario
+        {
+            get => this.salario;
+            set =>  this.salario = evaluarSalario(value);
+        }
+
+
     }
 
 
