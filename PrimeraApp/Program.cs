@@ -11,68 +11,27 @@ namespace PrimeraApp
 
         }
 
-        //CLASES SELLADAS (Sealed)
-        // Clase de la cual no se va a poder herdar
-        // Al usar selead No permite heredar la clase
 
-        //METODOS SELLADOS (Sealed)
-        // Al igual que las clases evitan la psoibilidad de herencia
+    }
 
 
-        /*
-        sealed class Mamiferos 
+    class Empleado
+    {
+        //CREACIÓN DE PROPIEDADES
+        private double salario;
+        private string nombre = string.Empty;
+        private double evaluarSalario(double salario)
         {
-     
-            public Mamiferos(int numero)
-            {
-                Console.WriteLine(numero);
-            }
-            public  void getNombre()
-            {
-                Console.WriteLine("Nombre de un mamifero");
-            }
-
+            if (salario < 0) return 0;
+            else return salario;
         }
-
-        */
-        class Animal { 
-        
-            public virtual void getNombre()
-            {
-
-            }
-        }
-
-
-        class Mamiferos: Animal
-         {
-
-             public Mamiferos(int numero)
-             {
-                 Console.WriteLine(numero);
-             }
-
-
-            // Los saled metodos NO pueden ser sobreescritos
-            public sealed override void getNombre()
-             {
-                 Console.WriteLine("Nombre de un mamifero");
-             }
-
-         }
-
-   
-        class Humano:Mamiferos
+        public double SALARIO
         { 
-        
-            public Humano(int numero):base(numero)
-            {
-                Console.WriteLine(numero);
-            }
-        
-        
+               get { return this.salario;  }
+               set { this.salario = evaluarSalario(value);  } 
         }
-
+    
+    
     }
 
 
@@ -1361,3 +1320,82 @@ namespace PrimeraApp
  
  
  */
+
+
+/*
+ CLASES SELLADAS
+
+
+
+        static void Main(string[] args)
+        {
+
+        }
+
+        //CLASES SELLADAS (Sealed)
+        // Clase de la cual no se va a poder herdar
+        // Al usar selead No permite heredar la clase
+
+        //METODOS SELLADOS (Sealed)
+        // Al igual que las clases evitan la psoibilidad de herencia
+
+
+        /*
+        sealed class Mamiferos 
+        {
+     
+            public Mamiferos(int numero)
+            {
+                Console.WriteLine(numero);
+            }
+            public  void getNombre()
+            {
+                Console.WriteLine("Nombre de un mamifero");
+            }
+
+        }
+
+        */
+
+/*
+class Animal
+{
+
+    public virtual void getNombre()
+    {
+
+    }
+}
+
+
+class Mamiferos : Animal
+{
+
+    public Mamiferos(int numero)
+    {
+        Console.WriteLine(numero);
+    }
+
+
+    // Los saled metodos NO pueden ser sobreescritos
+    public sealed override void getNombre()
+    {
+        Console.WriteLine("Nombre de un mamifero");
+    }
+
+}
+
+
+class Humano : Mamiferos
+{
+
+    public Humano(int numero) : base(numero)
+    {
+        Console.WriteLine(numero);
+    }
+
+
+}
+
+
+*/
