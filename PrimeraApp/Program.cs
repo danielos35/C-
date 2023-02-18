@@ -19,8 +19,8 @@ namespace PrimeraApp
      
      
      MEMORIA
-        - STACK: Almacena clases primitivas y referencias a objetos
-        - HEAP: Guarda al objeto
+        - STACK: Almacena clases primitivas y referencias a objetos "De acceso rapido"
+        - HEAP: Guarda al objeto, de acceso "lento"
 
      
      
@@ -29,12 +29,13 @@ namespace PrimeraApp
     //STRUCT
     // - Se utiliza de la misma manera que las clases, pero varía su ubicación en memoria
     // - Cada cambio a las estructuras genera una nueva copia de la misma, NO una modificación por referencia
+    // - Fu
 
 
 
     struct Empleado {
         string nombre;
-        public Empleado(string:nombre)
+        public Empleado(string nombre)
         {
             this.nombre = nombre;
         }
