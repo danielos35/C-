@@ -15,31 +15,20 @@ namespace PrimeraApp
     }
 
 
-    class Empleado
-    {
-        //CREACIÓN DE PROPIEDADES
-        private double salario;
-        private string nombre = string.Empty;
-        private double evaluarSalario(double salario)
-        {
-            if (salario < 0) return 0;
-            else return salario;
-        }
-        public double SALARIO
-        { 
-               get { return this.salario;  }
-               set { this.salario = evaluarSalario(value); } 
-        }
+    /*
+     
+     
+     MEMORIA
+        - STACK: Almacena clases primitivas y referencias a objetos
+        - HEAP: Guarda al objeto
 
-        //Otra sintaxis
-        public double _salario
-        {
-            get => this.salario;
-            set =>  this.salario = evaluarSalario(value);
-        }
-
-
-    }
+     
+     
+     */
+    
+    //STRUCT
+        // - Se utiliza de la misma manera que las clases, pero varía su ubicación en memoria
+        // - Cada cambio a las estructuras genera una nueva copia de la misma, NO una modificación por referencia
 
 
 }
@@ -1406,3 +1395,60 @@ class Humano : Mamiferos
 
 
 */
+
+/*
+ 
+  class Program
+    {
+
+
+
+        static void Main(string[] args)
+        {
+
+        }
+
+
+    }
+
+
+    class Empleado
+    {
+        //CREACIÓN DE PROPIEDADES
+        private double salario;
+        private string nombre = string.Empty;
+        private double evaluarSalario(double salario)
+        {
+            if (salario < 0) return 0;
+            else return salario;
+        }
+        public double SALARIO
+        { 
+               get { return this.salario;  }
+               set { this.salario = evaluarSalario(value); } 
+        }
+
+        //Otra sintaxis
+        public double _salario
+        {
+            get => this.salario;
+            set =>  this.salario = evaluarSalario(value);
+        }
+
+
+    }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ */
