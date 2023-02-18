@@ -25,12 +25,22 @@ namespace PrimeraApp
      
      
      */
-    
+
     //STRUCT
-        // - Se utiliza de la misma manera que las clases, pero varía su ubicación en memoria
-        // - Cada cambio a las estructuras genera una nueva copia de la misma, NO una modificación por referencia
+    // - Se utiliza de la misma manera que las clases, pero varía su ubicación en memoria
+    // - Cada cambio a las estructuras genera una nueva copia de la misma, NO una modificación por referencia
 
 
+
+    struct Empleado {
+        string nombre;
+        public Empleado(string:nombre)
+        {
+            this.nombre = nombre;
+        }
+
+
+    }
 }
 
 
