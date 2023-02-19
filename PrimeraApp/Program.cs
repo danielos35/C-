@@ -8,40 +8,22 @@ namespace PrimeraApp
 
         static void Main(string[] args)
         {
-
+            Estaciones cerca = Estaciones.Estadio;
         }
 
 
     }
 
+    // ENUM
+        // SON VALORES FIJOS, CONSTANTES
+        // AUTOMATICAMENTE SE ASIGNAN DE 0 en adelante
 
-    /*
-     
-     
-     MEMORIA
-        - STACK: Almacena clases primitivas y referencias a objetos "De acceso rapido"
-        - HEAP: Guarda al objeto, de acceso "lento"
-
-     
-     
-     */
-
-    //STRUCT
-    // - Se utiliza de la misma manera que las clases, pero varía su ubicación en memoria
-    // - Cada cambio a las estructuras genera una nueva copia de la misma, NO una modificación por referencia
-    // - Fu
-
-
-
-    struct Empleado {
-        string nombre;
-        public Empleado(string nombre)
-        {
-            this.nombre = nombre;
-        }
-
-
+    class ENUM_CLASS {
+    
     }
+
+
+    enum Estaciones { Sta_lucia = 100, Floresta = 200, Estadio = 3000 };
 }
 
 
@@ -1463,3 +1445,53 @@ class Humano : Mamiferos
  
  
  */
+
+/*
+ 
+     class Program
+    {
+
+
+
+        static void Main(string[] args)
+        {
+
+        }
+
+
+    }
+
+
+    /*
+     
+     
+     MEMORIA
+        - STACK: Almacena clases primitivas y referencias a objetos "De acceso rapido"
+        - HEAP: Guarda al objeto, de acceso "lento"
+
+     
+     
+     */
+
+//STRUCT
+// - Se utiliza de la misma manera que las clases, pero varía su ubicación en memoria
+// - Cada cambio a las estructuras genera una nueva copia de la misma, NO una modificación por referencia
+// - No herendan de otras clases pero SI de interfaces
+// - El compilador no inicia los campos, puedes iniciarlos en el constructor
+// - NO puede haber sobrecarga de constructores
+//¿CUANDO LO USAMOS? Cuando necesitamos almacenar una cantidad muy alta de datos en memoria
+
+/*
+
+struct Empleado
+{
+    string nombre;
+    public Empleado(string nombre)
+    {
+        this.nombre = nombre;
+    }
+
+
+}
+
+*/
