@@ -17,13 +17,16 @@ namespace PrimeraApp
     // ENUM
         // SON VALORES FIJOS, CONSTANTES
         // AUTOMATICAMENTE SE ASIGNAN DE 0 en adelante
+        // SOLO PUEDEN SER INT LOS DATOS ALMACENADOS
 
     class ENUM_CLASS {
     
     }
 
 
-    enum Estaciones { Sta_lucia = 100, Floresta = 200, Estadio = 3000 };
+    enum Estaciones { Sta_lucia = 100, Floresta = 200, Estadio = 300 };
+    enum Nombres { Nombre ("Daniel"),}
+
 }
 
 
