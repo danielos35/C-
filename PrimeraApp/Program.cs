@@ -9,55 +9,24 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
-            var metodo = new ManejoDeArchivos();
+            
         }
-
 
         /*
          
-            Garbage Collection
-                -  Ver objeto que no se utilizarán mas.
-                -  Elimina los recursos que no utilizamos.
-                -  Automaticamente el lenguaje limpia los recursos
-
-            DESTRUCTORES
-                - Cada vez que se elimina un recuros
-                - Conexiones con bases de datos
-                - Cerrar ficheros externos     
-                - Solo se usan en clases
-                - Cada clase solo puede tener un destructor
-                - Los destructores no se heredan ni se sobrecargan
-                - NO tienen modificadores de acceso NI parametros
+         PROGRAMACIÓN GENERICA
+            - Se tiene mayor sencilles en el codigo
+         
+         
+         
+         
+         
+         
+         
          
          */
-
-
-        class ManejoDeArchivos {
-
-            StreamReader archivo = null;
-            int contador = 0;
-            string linea;
-            public ManejoDeArchivos()
-            {
-                this.archivo = new StreamReader(@"c:\HOLA_MUNDO.txt"); 
-                while( (linea = archivo.ReadLine()) != null )
-                {
-                    Console.WriteLine(linea);
-                    contador++;
-                }
-            }
-
-            //DESTRUCTOR (ICONO SE CREA CON alt+126)
-            ~ManejoDeArchivos()
-            {
-                archivo.Close();
-                Console.WriteLine("Se cerró la lectura")
-            }
-
-
-        
-        
-        }
+    
+      
 
 
 
@@ -1567,6 +1536,74 @@ struct Empleado
 
     enum Estaciones { Sta_lucia = 100, Floresta = 200, Estadio = 300 };
     enum Nombres { Nombre ("Daniel"),}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ */
+
+
+/*
+    static void Main(string[] args)
+        {
+
+            var metodo = new ManejoDeArchivos();
+        }
+
+
+        /*
+         
+            Garbage Collection
+                -  Ver objeto que no se utilizarán mas.
+                -  Elimina los recursos que no utilizamos.
+                -  Automaticamente el lenguaje limpia los recursos
+
+            DESTRUCTORES
+                - Cada vez que se elimina un recuros
+                - Conexiones con bases de datos
+                - Cerrar ficheros externos     
+                - Solo se usan en clases
+                - Cada clase solo puede tener un destructor
+                - Los destructores no se heredan ni se sobrecargan
+                - NO tienen modificadores de acceso NI parametros
+         
+         */
+
+/*
+class ManejoDeArchivos
+{
+
+    StreamReader archivo = null;
+    int contador = 0;
+    string linea;
+    public ManejoDeArchivos()
+    {
+        this.archivo = new StreamReader(@"c:\HOLA_MUNDO.txt");
+        while ((linea = archivo.ReadLine()) != null)
+        {
+            Console.WriteLine(linea);
+            contador++;
+        }
+    }
+
+    //DESTRUCTOR (ICONO SE CREA CON alt+126)
+    ~ManejoDeArchivos()
+    {
+        archivo.Close();
+        Console.WriteLine("Se cerró la lectura")
+            }
+
+
+ 
+ 
+ 
  
  
  
