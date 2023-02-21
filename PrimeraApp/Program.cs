@@ -9,24 +9,83 @@ namespace PrimeraApp
         static void Main(string[] args)
         {
 
+            AlmacenObjetos_ archivos = new AlmacenObjetos_(4);
+            archivos.agregar("Juan");
+            archivos.agregar("Daniel");
+            archivos.agregar("Felipe");
+            String nombrePersona = (String)archivos.getElemento(2);
+            Console.WriteLine(nombrePersona);
             
+
         }
 
         /*
          
          PROGRAMACIÓN GENERICA
             - Se tiene mayor sencilles en el codigo
-         
-         
-         
-         
-         
-         
-         
+            - Comprobación de error en tiempo de compilación 
+            - Se debe de indicar el tipo de dato que va a ser usado en este caso para un generico usamos T
          
          */
-    
-      
+
+
+        // FORMA 1.
+
+        class AlmacenObjetos_
+        {
+
+
+            private Object[] datosElemento;
+            private int i = 9;
+            public AlmacenObjetos_(int z)
+            {
+                datosElemento= new Object[z];
+            }
+
+            public void agregar(Object obj)
+            {
+                datosElemento[i] = obj;
+                i++;
+            }
+
+            public Object getElemento(int i)
+            {
+                return datosElemento[i];
+            }
+
+        }
+
+
+        //Forma 2
+
+        //Por convensión se utiliza T para identificar los genericos, y significa que la clase va almacenar cualquier tipo de objeto
+        class AlmacenObjetos<T>
+        {
+
+
+            private T[] datosElemento;
+            private int i = 9;
+            public AlmacenObjetos(int z)
+            {
+                datosElemento = new T[z];
+            }
+
+            public void agregar(T obj)
+            {
+                datosElemento[i] = obj;
+                i++;
+            }
+
+            public T getElemento(int i)
+            {
+                return datosElemento[i];
+            }
+
+        }
+
+
+
+
 
 
 
