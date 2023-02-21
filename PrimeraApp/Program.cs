@@ -22,6 +22,9 @@ namespace PrimeraApp
             archivos_.agregar(12);
             int nombrePersona_ = archivos_.getElemento(12);
 
+            // RESTRICCIONS
+
+
             
 
         }
@@ -88,6 +91,38 @@ namespace PrimeraApp
                 return datosElemento[i];
             }
 
+        }
+
+
+        //FORMA 3 Clases genericas con restricciones
+
+        interface IAlmacen
+        {
+            public int getInventario();
+        }
+
+        class Almacen_res<T> where T: IAlmacen
+        {
+             public Almacen_res(int data)
+            {
+
+            }
+        }
+
+        class Almacen_1 : IAlmacen
+        {
+            public int getInventario()
+            {
+                return 0;
+            }
+        }
+
+        class Almacen_2
+        {
+            public int getInventario__()
+            {
+                return 0;
+            }
         }
 
 
