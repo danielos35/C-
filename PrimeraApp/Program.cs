@@ -15,6 +15,13 @@ namespace PrimeraApp
             archivos.agregar("Felipe");
             String nombrePersona = (String)archivos.getElemento(2);
             Console.WriteLine(nombrePersona);
+
+
+            //CLASE GENERICA
+            AlmacenObjetos<int> archivos_ = new AlmacenObjetos<int>(5);
+            archivos_.agregar(12);
+            int nombrePersona_ = archivos_.getElemento(12);
+
             
 
         }
